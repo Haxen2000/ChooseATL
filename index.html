@@ -1,0 +1,636 @@
+<html>
+  <head>
+    <style>
+      .container {
+        position: relative;
+        height: 700px;
+        border: 1px solid #000;
+      }
+      .flex {
+        display: flex;
+      }
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 90px;
+        position: absolute;
+        left: 600px;
+        top: calc(50% - 50px);
+      }
+      .c1, .path1, .c11 {
+        background-color: blue;
+        stroke: blue;
+      }
+      .c2, .path2, .c12 {
+        background-color: crimson;
+        stroke: crimson;
+      }
+      .c3, .path3, .c13 {
+        background-color: gold;
+        stroke: gold;
+      }
+      .c4, .path4, .c14 {
+        background-color: hotpink;
+        stroke: hotpink;
+      }
+      .c5, .path5, .c15 {
+        background-color: limegreen;
+        stroke: limegreen;
+      }
+      .c6, .path6, .c16 {
+        background-color: maroon;
+        stroke: maroon;
+      }
+      .c7, .path7, .c17 {
+        background-color: seagreen;
+        stroke: seagreen;
+      }
+      .c8, .path8, .c18 {
+        background-color: turquoise;
+        stroke: turquoise;
+      }
+      path {
+        fill-opacity: 0;
+        stroke-width: 1;
+        stroke: transparent !important;
+      }
+      svg {
+        /* border: 1px solid black; */
+        top: 50px;
+        left: 350px;
+        position: relative;
+      }
+    </style>
+    <script src='./gsap-public/gsap-public/minified/gsap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js'></script>
+    <script>
+      window.onload = () => {
+        gsap.registerPlugin(MotionPathPlugin);
+        gsap.to('.c1', {
+          motionPath: {
+            path: '.path1',
+            align: '.path1',
+            alignOrigin: [.5, .5],
+            start: .25,
+            end: 1.25,
+          },
+          duration: 5,
+          repeat: -1,
+          ease: "power1.inOut",
+        });
+        gsap.to('.c2', {
+          motionPath: {
+            path: '.path2',
+            align: '.path2',
+            alignOrigin: [.5, .5],
+            start: .25,
+            end: 1.25,
+          },
+          duration: 5,
+          repeat: -1,
+          ease: "power1.inOut",
+        });
+        gsap.to('.c3', {
+          motionPath: {
+            path: '.path3',
+            align: '.path3',
+            alignOrigin: [.5, .5],
+            start: .25,
+            end: 1.25,
+          },
+          duration: 5,
+          repeat: -1,
+          ease: "power1.inOut",
+        });
+        gsap.to('.c4', {
+          motionPath: {
+            path: '.path4',
+            align: '.path4',
+            alignOrigin: [.5, .5],
+            start: .25,
+            end: 1.25,
+          },
+          duration: 5,
+          repeat: -1,
+          ease: "power1.inOut",
+        });
+        gsap.to('.c5', {
+          motionPath: {
+            path: '.path5',
+            align: '.path5',
+            alignOrigin: [.5, .5],
+            start: .25,
+            end: 1.25,
+          },
+          duration: 5,
+          repeat: -1,
+          ease: "power1.inOut",
+        });
+        gsap.to('.c6', {
+          motionPath: {
+            path: '.path6',
+            align: '.path6',
+            alignOrigin: [.5, .5],
+            start: .25,
+            end: 1.25,
+          },
+          duration: 5,
+          repeat: -1,
+          ease: "power1.inOut",
+        });
+        gsap.to('.c7', {
+          motionPath: {
+            path: '.path7',
+            align: '.path7',
+            alignOrigin: [.5, .5],
+            start: .25,
+            end: 1.25,
+          },
+          duration: 5,
+          repeat: -1,
+          ease: "power1.inOut",
+        });
+        gsap.to('.c8', {
+          motionPath: {
+            path: '.path8',
+            align: '.path8',
+            alignOrigin: [.5, .5],
+            start: .25,
+            end: 1.25
+          },
+          duration: 5,
+          repeat: -1,
+          ease: "power1.inOut",
+        });
+        
+        const moveX = {
+          small: 150,
+          left: 350,
+          right: 850,
+          start: 600,
+        };
+        const moveY = {
+          top: 200,
+          bottom: 400,
+          start: 300,
+        }
+        gsap.to('.c11', { // blue
+          keyframes: {
+            '0%': { 
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 10,
+            },
+            '25%': {
+              left: moveX.left + 65,
+              top: moveY.start,
+              width: '166px',
+              height: '166px',
+              zIndex: 11,
+            },
+            '37.5%': {
+              left: moveX.start,
+              top: moveY.start,
+              width: '200px',
+              height: '200px',
+              zIndex: 20,
+            },
+            '50%': {
+              left: moveX.right - 50,
+              top: moveY.start,
+              width: '166px',
+              height: '166px',
+              zIndex: 12,
+            },
+            '62.5%': {
+              left: moveX.right,
+              top: moveY.start,
+              width: '150px',
+              height: '150px',
+              zIndex: 7,
+            },
+            '75%': {
+              left: moveX.right - 50,
+              top: moveY.start,
+              width: '77px',
+              height: '77px',
+              zIndex: 6,
+            },
+            /*'90%': {
+              left: moveX.left,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 10,
+            },*/
+            '100%': {
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 10,
+            },
+            easeEach: 'none',
+          },
+          duration: 5,
+          repeat: -1,
+          repeatDelay: 1,
+          ease: 'power1.inOut',
+        });
+        gsap.to('.c12', { // crimson
+          keyframes: {
+            '0%': { 
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 9,
+            },
+            '25%': {
+              left: moveX.right,
+              top: moveY.bottom,
+              width: '150px',
+              height: '150px',
+              zIndex: 10,
+              ease: 'power2.out',
+            },
+            '50%': {
+              left: moveX.start + 25,
+              top: moveY.bottom,
+              width: '75px',
+              height: '75px',
+              zIndex: 7,
+            },
+            '75%': {
+              left: moveX.left,
+              top: moveY.bottom,
+              width: '150px',
+              height: '150px',
+              zIndex: 10,
+            },
+            '100%': {
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 9,
+            },
+            easeEach: 'none',
+          },
+          duration: 5,
+          repeat: -1,
+          repeatDelay: 1,
+          ease: 'power1.inOut',
+        });
+        gsap.to('.c13', { // gold
+          keyframes: {
+            '0%': { 
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 8,
+            },
+            '25%': {
+              left: moveX.right,
+              top: moveY.top + 25,
+              width: '125px',
+              height: '125px',
+              zIndex: 8,
+              ease: 'power2.out',
+            },
+            '50%': {
+              left: moveX.start + 25,
+              top: moveY.top,
+              width: '50px',
+              height: '50px',
+              zIndex: 5,
+            },
+            '75%': {
+              left: moveX.left - 25,
+              top: moveY.top,
+              width: '125px',
+              height: '125px',
+              zIndex: 8,
+            },
+            '100%': {
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 7,
+            },
+            easeEach: 'none',
+          },
+          duration: 4.75,
+          repeat: -1,
+          delay: .25,
+          repeatDelay: 1.25,
+          ease: 'power1.inOut',
+        });
+        gsap.to('.c14', { // hotpink
+          keyframes: {
+            '0%': { 
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 7,
+            },
+            '25%': {
+              left: moveX.right - 50,
+              top: moveY.top - 50,
+              width: '150px',
+              height: '150px',
+              zIndex: 9,
+              ease: 'power2.out',
+            },
+            '50%': {
+              left: moveX.start + 25,
+              top: moveY.top - 50,
+              width: '75px',
+              height: '75px',
+              zIndex: 6,
+            },
+            '75%': {
+              left: moveX.left + 50,
+              top: moveY.top - 50,
+              width: '150px',
+              height: '150px',
+              zIndex: 9,
+            },
+            '100%': {
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 8,
+            },
+            easeEach: 'none',
+          },
+          duration: 5,
+          repeat: -1,
+          repeatDelay: 1,
+          ease: 'power1.inOut',
+        });
+        gsap.to('.c15', { // limegreen
+          keyframes: {
+            '0%': { 
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 7,
+            },
+            '25%': {
+              left: moveX.left,
+              top: moveY.top,
+              width: '150px',
+              height: '150px',
+              zIndex: 10,
+              ease: 'power2.out',
+            },
+            '50%': {
+              left: moveX.start,
+              top: moveY.top,
+              width: '200px',
+              height: '200px',
+              zIndex: 12,
+            },
+            '75%': {
+              left: moveX.right,
+              top: moveY.top,
+              width: '150px',
+              height: '150px',
+              zIndex: 10,
+            },
+            '100%': {
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 7,
+            },
+            easeEach: 'none',
+          },
+          duration: 5,
+          repeat: -1,
+          repeatDelay: 1,
+          ease: 'power1.inOut',
+        });
+        gsap.to('.c16', { // maroon
+          keyframes: {
+            '0%': {
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 6,
+            },
+            '25%': {
+              left: moveX.right - 70,
+              top: moveY.start + 15,
+              width: '77px',
+              height: '77px',
+              zIndex: 5,
+            },
+            '40%': {
+              left: moveX.start + 25,
+              top: moveY.start + 25,
+              width: '50px',
+              height: '50px',
+              zIndex: 5,
+            },
+            '60%': {
+              left: moveX.left + 90,
+              top: moveY.start + 15,
+              width: '100px',
+              height: '100px',
+              zIndex: 6,
+            },
+            '70%': {
+              left: moveX.left - 25,
+              top: moveY.start - 25,
+              width: '150px',
+              height: '150px',
+              zIndex: 11,
+            },
+            '85%': {
+              left: moveX.left + 125,
+              top: moveY.start - 50,
+              width: '177px',
+              height: '177px',
+              zIndex: 11,
+            },
+            '100%': {
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 6,
+            },
+            easeEach: 'none',
+          },
+          duration: 5,
+          repeat: -1,
+          repeatDelay: 1,
+          ease: 'power1.inOut',
+        });
+        gsap.to('.c17', { // seagreen
+          keyframes: {
+            '0%': {
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 6,
+            },
+            '25%': {
+              left: moveX.left + 50,
+              top: moveY.start + 60,
+              width: '66px',
+              height: '66px',
+              zIndex: 6,
+            },
+            '40%': {
+              left: moveX.left,
+              top: moveY.start,
+              width: '150px',
+              height: '150px',
+              zIndex: 11,
+            },
+            '62%': {
+              left: moveX.start - 25,
+              top: moveY.start - 25,
+              width: '200px',
+              height: '200px',
+              zIndex: 20,
+            },
+            '85%': {
+              left: moveX.right,
+              top: moveY.start,
+              width: '150px',
+              height: '150px',
+              zIndex: 10,
+            },
+            '100%': {
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 6,
+            },
+            easeEach: 'none',
+          },
+          duration: 5,
+          repeat: -1,
+          repeatDelay: 1,
+          ease: 'power1.inOut',
+        });
+        gsap.to('.c18', { // turquoise
+          keyframes: {
+            '0%': { 
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 7,
+            },
+            '25%': {
+              left: moveX.left - 50,
+              top: moveY.bottom - 50,
+              width: '150px',
+              height: '150px',
+              zIndex: 10,
+              ease: 'power2.out',
+            },
+            '50%': {
+              left: moveX.start,
+              top: moveY.bottom - 50,
+              width: '200px',
+              height: '200px',
+              zIndex: 12,
+            },
+            '75%': {
+              left: moveX.right + 50,
+              top: moveY.bottom - 50,
+              width: '150px',
+              height: '150px',
+              zIndex: 10,
+            },
+            '100%': {
+              left: moveX.start,
+              top: moveY.start,
+              width: '100px',
+              height: '100px',
+              zIndex: 7,
+            },
+            easeEach: 'none',
+          },
+          duration: 5,
+          repeat: -1,
+          repeatDelay: 1,
+          ease: 'power1.inOut',
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div class='flex circle-spin container'>
+      <div class='circle c1'></div>
+      <div class='circle c2'></div>
+      <div class='circle c3'></div>
+      <div class='circle c4'></div>
+      <div class='circle c5'></div>
+      <div class='circle c6'></div>
+      <div class='circle c7'></div>
+      <div class='circle c8'></div>
+      <svg width="600" height="600" viewbox='-5 -5 280 280'>
+        <path
+        class="path1"
+     d="m 182.76046,154.39307 a 45.161498,74.665224 30 0 1 -76.44363,42.0812 45.161498,74.665224 30 0 1 -1.77841,-87.24271 45.161498,74.665224 30 0 1 76.44365,-42.081263 45.161498,74.665224 30 0 1 1.77839,87.242773 z"
+     transform="translate(26.986984,-62.968227)" />
+  <path
+  class="path2"
+     d="m 182.76046,154.39307 a 45.161498,74.665224 30 0 1 -76.44363,42.0812 45.161498,74.665224 30 0 1 -1.77841,-87.24271 45.161498,74.665224 30 0 1 76.44365,-42.081263 45.161498,74.665224 30 0 1 1.77839,87.242773 z"
+     transform="matrix(-1,0,0,1,239.85977,-62.968227)" />
+  <path
+  class="path3"
+     d="m 182.76045,24.988292 a 45.161498,74.665224 30 0 1 -76.44363,42.0812 45.161498,74.665224 30 0 1 -1.77841,-87.242707 45.161498,74.665224 30 0 1 76.44365,-42.081266 45.161498,74.665224 30 0 1 1.77839,87.242773 z"
+     transform="matrix(1,0,0,-1,26.986984,200.65634)" />
+  <path
+  class="path4"
+     d="m 182.76047,24.988292 a 45.161498,74.665224 30 0 1 -76.44363,42.0812 45.161498,74.665224 30 0 1 -1.77841,-87.242707 45.161498,74.665224 30 0 1 76.44365,-42.081266 45.161498,74.665224 30 0 1 1.77839,87.242773 z"
+     transform="rotate(180,119.92989,100.32818)" />
+  <path
+  class="path5"
+     d="m 182.76047,24.988292 a 45.161498,74.665224 30 0 1 -76.44363,42.0812 45.161498,74.665224 30 0 1 -1.77841,-87.242707 45.161498,74.665224 30 0 1 76.44365,-42.081266 45.161498,74.665224 30 0 1 1.77839,87.242773 z"
+     transform="rotate(-150,128.83159,96.713266)" />
+  <path
+    class="path6"
+    d="m 182.76045,24.988292 a 45.161498,74.665224 30 0 1 -76.44363,42.0812 45.161498,74.665224 30 0 1 -1.77841,-87.242707 45.161498,74.665224 30 0 1 76.44365,-42.081266 45.161498,74.665224 30 0 1 1.77839,87.242773 z"
+    transform="matrix(0.86602541,-0.50000001,-0.50000001,-0.86602541,74.80073,244.88579)" />
+  <path
+  class="path7"
+     d="m 182.76046,154.39307 a 45.161498,74.665224 30 0 1 -76.44363,42.0812 45.161498,74.665224 30 0 1 -1.77841,-87.24271 45.161498,74.665224 30 0 1 76.44365,-42.081263 45.161498,74.665224 30 0 1 1.77839,87.242773 z"
+     transform="matrix(-0.86602541,0.50000001,0.50000001,0.86602541,127.34199,-89.858411)" />
+  <path
+     class="path8"
+     d="m 182.76046,154.39307 a 45.161498,74.665224 30 0 1 -76.44363,42.0812 45.161498,74.665224 30 0 1 -1.77841,-87.24271 45.161498,74.665224 30 0 1 76.44365,-42.081263 45.161498,74.665224 30 0 1 1.77839,87.242773 z"
+     transform="rotate(30,237.4315,215.38665)" />
+    </svg>
+    </div>
+    <div class='flex square-move container'>
+      <div class='circle c11'></div>
+      <!-- <div class='circle c12'></div> -->
+      <!-- <div class='circle c13'></div> -->
+      <div class='circle c14'></div>
+      <!-- <div class='circle c15'></div> -->
+      <!-- <div class='circle c16'></div> -->
+      <!-- <div class='circle c17'></div> -->
+      <!-- <div class='circle c18'></div> -->
+    </div>
+  </body>
+</html>
