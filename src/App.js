@@ -6,7 +6,7 @@ import img6 from './assets/img/4ad255d5c81ceb123336519ea6a3a8c7.jpg';
 import img7 from './assets/img/a8e83971a57f346a3689af5290781653.jpg';
 import { ReactComponent as AtlImg } from './assets/img/atl.svg';
 import IntroAnimation from './sections/intro/intro-animation';
-import Section1 from './sections/section1-partofthisplace/section1';
+import Section1 from './sections/section1-part-of-this-place/section1';
 
 function App() {
   return (
