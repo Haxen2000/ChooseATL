@@ -1,8 +1,7 @@
-import * as Scrollytelling from '@bsmnt/scrollytelling';
-import './intro.css';
-import { Timeline, Tween } from 'react-gsap';
-import { gsap } from 'gsap';
 import { useEffect, useRef } from "react";
+import './intro.css';
+import { gsap } from 'gsap';
+import * as Scrollytelling from '@bsmnt/scrollytelling';
 
 
 function IntroAnimation () {
