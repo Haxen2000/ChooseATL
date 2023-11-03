@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { gsap } from 'gsap';
-import * as Scrollytelling from '@bsmnt/scrollytelling';
 import './intro.css';
 import { ReactComponent as AtlImg } from '../../assets/img/atl.svg';
 
@@ -482,8 +481,10 @@ function IntroAnimation () {
         color: '#e12d2d',
         delay: animationTime,
         duration: 2,
-        onComplete: () => { 
+        onComplete: () => {
+          document.querySelector('.square-move .atl_logo').setAttribute('class', 'atl_logo hidden');
           document.querySelector('.scrolly-telling-container').setAttribute('class', 'scrolly-telling-container');
+          document.querySelector('.nav').setAttribute('class', 'nav');
         }
       });
     }, introSectionRef);
