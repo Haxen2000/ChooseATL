@@ -1,3 +1,32 @@
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: local('Founders Grotesk'),
+  url('./assets/fonts/Klim-Order-23100982/WOFF2/founders-grotesk-regular.woff2') format('woff2'),
+    url('./assets/fonts/Klim-Order-23100982/OTF/FoundersGrotesk-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Resolve Sans';
+  src: local('Resolve Sans'),
+  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/masifa_medium_macroman/masifa-medium-webfont.woff2') format('woff2'),
+  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/masifa_medium_macroman/masifa-medium-webfont.woff') format('woff'),
+  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Fonts/masifa-medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Masifa Medium';
+  src: local('Resolve Sans'),
+  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/resolvesansregular_regular_macroman/resolve-regular-webfont.woff2') format('woff2'),
+  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/resolvesansregular_regular_macroman/resolve-regular-webfont.woff') format('woff'),
+  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Fonts/resolve-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   text-align: center;
 }
@@ -114,7 +143,7 @@
 }
 
 .card .text-container {
-  padding: 60px 100px;
+  padding: 60px 80px;
 }
 
 .card .img-container {
@@ -130,7 +159,7 @@
   /* color: #FFFCF6; */
 
   /* H1 */
-  /* font-family: FONTSPRING DEMO - Resolve Sans; */
+  font-family: 'Resolve Sans';
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
@@ -140,7 +169,7 @@
 
 .card .heading {
   /* color: var(--Bold-Black, #000); */
-  /* font-family: FONTSPRING DEMO - Medium; */
+  font-family: 'Masifa Medium';
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -150,9 +179,9 @@
 
 .card .quote {
   /* color: var(--Bold-Black, #000); */
-  /* font-family: FONTSPRING DEMO - Resolve Sans; */
-  /* font-size: 48px; */
-  font-size: 42px;
+  font-family: 'Resolve Sans';
+  font-size: 48px;
+  /* font-size: 42px; */
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -161,7 +190,7 @@
 
 .card .name {
   /* color: var(--Bold-Black, #000); */
-  /* font-family: FONTSPRING DEMO - Resolve Sans; */
+  font-family: 'Resolve Sans';
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
@@ -172,7 +201,7 @@
 
 .card .job {
   /* color: var(--Bold-Black, #000); */
-  /* font-family: Founders Grotesk; */
+  font-family: 'Founders Grotesk';
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -180,8 +209,9 @@
 }
 
 .data {
+  font-family: 'Masifa Medium';
   border-radius: 26px;
-  padding: 10px;
+  padding: 20px 10px;
   width: 100%;
   margin: 10px 0;
 }
@@ -194,8 +224,8 @@
 }
 
 .data .big {
-  font-size: 70px;
+  font-size: 62px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 48px */
+  line-height: 48px;
 }

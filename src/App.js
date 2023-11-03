@@ -1,12 +1,12 @@
 import './App.css';
 import * as Scrollytelling from '@bsmnt/scrollytelling';
-import img1 from './assets/0e3c4cfea33874c54366a8990fd6cf65.jpg';
-import img2 from './assets/30bab58d3cee68e66b5a7202d53285d4.jpg';
-import img3 from './assets/c5ec34283809bb508544f5a74acc9ab4.jpg';
-import img4 from './assets/02e08baea97db281f6074e0d29fcf2e1.jpg';
-import img5 from './assets/ac8c1be75ebcccbd92c43d1511d267e3.jpg';
-import img6 from './assets/4ad255d5c81ceb123336519ea6a3a8c7.jpg';
-import img7 from './assets/a8e83971a57f346a3689af5290781653.jpg';
+import img1 from './assets/img/0e3c4cfea33874c54366a8990fd6cf65.jpg';
+import img2 from './assets/img/30bab58d3cee68e66b5a7202d53285d4.jpg';
+import img3 from './assets/img/c5ec34283809bb508544f5a74acc9ab4.jpg';
+import img4 from './assets/img/02e08baea97db281f6074e0d29fcf2e1.jpg';
+import img5 from './assets/img/ac8c1be75ebcccbd92c43d1511d267e3.jpg';
+import img6 from './assets/img/4ad255d5c81ceb123336519ea6a3a8c7.jpg';
+import img7 from './assets/img/a8e83971a57f346a3689af5290781653.jpg';
 import IntroAnimation from './sections/intro/intro-animation';
 
 function App() {
@@ -223,7 +223,7 @@ function App() {
                           <div>
                             <span className='small'>Nearly</span>
                           </div>
-                          <div>
+                          <div className='flex align-end'>
                             <span className='big'>$400 Billion</span>
                             <span className='small'>in real GDP</span>
                           </div>
