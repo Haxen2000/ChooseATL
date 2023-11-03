@@ -1,14 +1,12 @@
 import './App.css';
 import * as Scrollytelling from '@bsmnt/scrollytelling';
-import img1 from './assets/img/0e3c4cfea33874c54366a8990fd6cf65.jpg';
-import img2 from './assets/img/30bab58d3cee68e66b5a7202d53285d4.jpg';
-import img3 from './assets/img/c5ec34283809bb508544f5a74acc9ab4.jpg';
 import img4 from './assets/img/02e08baea97db281f6074e0d29fcf2e1.jpg';
 import img5 from './assets/img/ac8c1be75ebcccbd92c43d1511d267e3.jpg';
 import img6 from './assets/img/4ad255d5c81ceb123336519ea6a3a8c7.jpg';
 import img7 from './assets/img/a8e83971a57f346a3689af5290781653.jpg';
 import { ReactComponent as AtlImg } from './assets/img/atl.svg';
 import IntroAnimation from './sections/intro/intro-animation';
+import Section1 from './sections/section1-partofthisplace/section1';
 
 function App() {
   return (
@@ -18,73 +16,7 @@ function App() {
         </div>
       <IntroAnimation />
       <div className='scrolly-telling-container hidden'>
-        <Scrollytelling.Root>
-          <section className='section flex'>
-            <Scrollytelling.Pin
-              childHeight={'700px'}
-              pinSpacerHeight={'4500px'}
-              top={100}
-            >
-              <div className='card' style={{ height: 'auto' }}>
-                <div className='column'>
-                  <div className='img-container' style={{ height: 'auto' }}> { /* flex flex-wrap */ }
-                    <div className='ani-relative o-hidden'>
-                      <Scrollytelling.Animation tween={{ start: 0, end: 33, to: { left: -50 } }}>
-                        <div style={{
-                          backgroundImage: `url(${img1})`,
-                          backgroundSize: 'cover',
-                          backgroundRepeat: 'no-repeat',
-                          width: '332px',
-                          'height': '362px',
-                          borderRadius: '26px',
-                          'left': '650px',
-                          'position': 'relative'
-                          }} />
-                      </Scrollytelling.Animation>
-                    </div>
-                    <div className='ani-relative o-hidden' style={{ marginTop: '-200px' }}>
-                      <Scrollytelling.Animation tween={{ start: 33, end: 66, to: { left: 300 } }}>
-                        <div style={{
-                          backgroundImage: `url(${img2})`,
-                          backgroundRepeat: 'no-repeat',
-                          backgroundPosition: '-145.913px -79.681px',
-                          backgroundSize: '211.931% 127.306%',
-                          width: '292px',
-                          'height': '298px',
-                          borderRadius: '26px',
-                          'left': '650px',
-                          'position': 'relative',
-                      
-                          }} />
-                      </Scrollytelling.Animation>
-                    </div>
-                    <div className='ani-relative o-hidden' style={{ marginTop: '-50px' }}>
-                      <Scrollytelling.Animation tween={{ start: 66, end: 100, to: { left: 100 } }}>
-                        <div style={{
-                          backgroundImage: `url(${img3})`,
-                          backgroundRepeat: 'no-repeat',
-                          backgroundPosition: '-86.068px -10.243px',
-                          backgroundSize: '163.78% 110.581%',
-                          width: '292px',
-                          'height': '259px',
-                          borderRadius: '26px',
-                          'left': '650px',
-                          'position': 'relative',
-                          }} />
-                      </Scrollytelling.Animation>
-                    </div>
-                  </div>
-                </div>
-                <div className='column flex align-center'>
-                  <div className='text-container flex flex-wrap'>
-                    <span className='job' style={{ marginBottom: 20 }}>Everyone comes in with their own idea of what Atlanta is.</span>
-                    <span className='title'>But when you live here—when you're <span className='blue-skies'>part of this place</span>—you know Atlanta isn't any <span className='phoenix-txt'>one thing.</span></span>
-                  </div>
-                </div>
-              </div>
-            </Scrollytelling.Pin>
-          </section>
-        </Scrollytelling.Root>
+        <Section1 />
         <Scrollytelling.Root>
           <section className='section flex'>
             <Scrollytelling.Pin
