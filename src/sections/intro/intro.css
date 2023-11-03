@@ -1,9 +1,3 @@
-.container {
-  /* position: relative; */
-  /* height: 700px; */
-  /* border: 1px solid #000; */
-}
-
 .circle {
   border-radius: 550px;
   position: absolute;
@@ -12,7 +6,6 @@
   background-position: 50%;
   background-size: 730px;
   background-repeat: no-repeat;
-  /* transform: none !important; */
 }
 
 .c1 {

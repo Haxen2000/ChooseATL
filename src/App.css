@@ -231,3 +231,8 @@
   font-weight: 700;
   line-height: 48px;
 }
+
+.hidden {
+  height: 0;
+  overflow: hidden;
+}

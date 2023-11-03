@@ -5,7 +5,7 @@ import './intro.css';
 import { ReactComponent as AtlImg } from '../../assets/img/atl.svg';
 
 function IntroAnimation () {
-  const app = useRef();
+  const introSectionRef = useRef();
 
   useEffect(() => {
     const baseX = -250;
@@ -477,35 +477,36 @@ function IntroAnimation () {
       });
 
       gsap.to('.atl_logo', {
-        top: -90,
+        top: -80,
         left: -700,
         color: '#e12d2d',
         delay: animationTime,
-        duration: 2
+        duration: 2,
+        onComplete: () => { 
+          document.querySelector('.scrolly-telling-container').setAttribute('class', 'scrolly-telling-container');
+        }
       });
-    }, app);
+    }, introSectionRef);
     return () => ctx.revert();
   }, []);
 
   return (
-    <section className='section flex' ref={app}>
-      <Scrollytelling.Pin
-        childHeight={'700px'}
-        pinSpacerHeight={'4500px'}
-        top={100}
-      >
-        <div class='flex square-move o-hidden'>
-          <div class='circle c1'></div>
-          <div class='circle c2'></div>
-          <div class='circle c3'></div>
-          <div class='circle c4'></div>
-          <div class='circle c5'></div>
-          <div class='circle c6'></div>
-          <div class='circle c7'></div>
-          <div class='circle c8'></div>
-          <AtlImg />
+    <section className='section flex' ref={introSectionRef}>
+      <div style={{ height: '100vh' }}>
+        <div style={{ height: '700px', position: 'sticky', top: '100px' }}>
+          <div className='flex square-move o-hidden'>
+            <div className='circle c1'></div>
+            <div className='circle c2'></div>
+            <div className='circle c3'></div>
+            <div className='circle c4'></div>
+            <div className='circle c5'></div>
+            <div className='circle c6'></div>
+            <div className='circle c7'></div>
+            <div className='circle c8'></div>
+            <AtlImg />
+          </div>
         </div>
-      </Scrollytelling.Pin>
+      </div>
     </section>
   )
 }
