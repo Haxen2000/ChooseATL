@@ -1,12 +1,12 @@
 import './App.css';
 import * as Scrollytelling from '@bsmnt/scrollytelling';
-import img4 from './assets/img/02e08baea97db281f6074e0d29fcf2e1.jpg';
 import img5 from './assets/img/ac8c1be75ebcccbd92c43d1511d267e3.jpg';
 import img6 from './assets/img/4ad255d5c81ceb123336519ea6a3a8c7.jpg';
 import img7 from './assets/img/a8e83971a57f346a3689af5290781653.jpg';
 import { ReactComponent as AtlImg } from './assets/img/atl.svg';
 import IntroAnimation from './sections/intro/intro-animation';
 import Section1 from './sections/section1-part-of-this-place/section1';
+import Section2 from './sections/section2-text-img-scrolling/section2';
 
 function App() {
   return (
@@ -17,108 +17,7 @@ function App() {
       <IntroAnimation />
       <div className='scrolly-telling-container hidden'>
         <Section1 />
-        <Scrollytelling.Root>
-          <section className='section flex'>
-            <Scrollytelling.Pin
-              childHeight={'700px'}
-              pinSpacerHeight={'4500px'}
-              top={100}
-            >
-              <div className='card' style={{ height: 'auto' }}>
-                <div className='column flex align-center'>
-                  <div className='text-container flex flex-wrap'>
-                    <span className='job'>Yes, it's a bustling job market complete with Fortune 500 corporations, startup incubators, world-leading financial tech, and nonstop film and TV production.</span>
-                  </div>
-                </div>
-                <div className='column'>
-                  <div className='img-container' style={{ height: '435px' }}>
-                    <div className='ani-relative o-hidden relative' style= {{ top: 0 }}>
-                      <Scrollytelling.Animation tween={{ start: 0, end: 33, from: { top: -435 } }}>
-                        <img src={img4} alt='alt' style={{
-                          width: '604px',
-                          'height': '435px',
-                          borderRadius: '26px',
-                          'position': 'relative'
-                          }} />
-                      </Scrollytelling.Animation>
-                    </div>
-                    <div className='ani-relative o-hidden relative' style= {{ top: -440 }}>
-                      <Scrollytelling.Animation tween={{ start: 33, end: 66, from: { top: -435 } }}>
-                      <img src={img4} alt='alt' style={{
-                          width: '604px',
-                          'height': '435px',
-                          borderRadius: '26px',
-                          'position': 'relative'
-                          }} />
-                      </Scrollytelling.Animation>
-                    </div>
-                    <div className='ani-relative o-hidden relative' style= {{ top: -880 }}>
-                      <Scrollytelling.Animation tween={{ start: 66, end: 100, from: { top: -435 } }}>
-                      <img src={img4} alt='alt' style={{
-                          width: '604px',
-                          'height': '435px',
-                          borderRadius: '26px',
-                          'position': 'relative'
-                          }} />
-                      </Scrollytelling.Animation>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Scrollytelling.Pin>
-          </section>
-        </Scrollytelling.Root>
-        <Scrollytelling.Root>
-          <section className='section flex'>
-            <Scrollytelling.Pin
-              childHeight={'700px'}
-              pinSpacerHeight={'4500px'}
-              top={100}
-            >
-              <div className='card' style={{ height: 'auto' }}>
-                <div className='column flex align-center'>
-                  <div className='text-container flex flex-wrap'>
-                    <span className='job'>But it's also serene, walkable neighborhoods. It's six major sports teams and their rabid fan bases. But it's also the lifetime bonds formed within cycling clubs, softball teams, and improv troupes.</span>
-                  </div>
-                </div>
-                <div className='column'>
-                  <div className='img-container' style={{ height: '435px' }}>
-                    <div className='ani-relative o-hidden relative' style= {{ top: 0 }}>
-                      <Scrollytelling.Animation tween={{ start: 0, end: 33, from: { top: -435 } }}>
-                        <img src={img7} alt='alt' style={{
-                          width: '604px',
-                          'height': '435px',
-                          borderRadius: '26px',
-                          'position': 'relative'
-                          }} />
-                      </Scrollytelling.Animation>
-                    </div>
-                    <div className='ani-relative o-hidden relative' style= {{ top: -440 }}>
-                      <Scrollytelling.Animation tween={{ start: 33, end: 66, from: { top: -435 } }}>
-                      <img src={img7} alt='alt' style={{
-                          width: '604px',
-                          'height': '435px',
-                          borderRadius: '26px',
-                          'position': 'relative'
-                          }} />
-                      </Scrollytelling.Animation>
-                    </div>
-                    <div className='ani-relative o-hidden relative' style= {{ top: -880 }}>
-                      <Scrollytelling.Animation tween={{ start: 66, end: 100, from: { top: -435 } }}>
-                      <img src={img7} alt='alt' style={{
-                          width: '604px',
-                          'height': '435px',
-                          borderRadius: '26px',
-                          'position': 'relative'
-                          }} />
-                      </Scrollytelling.Animation>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Scrollytelling.Pin>
-          </section>
-        </Scrollytelling.Root>
+        <Section2 />
         <Scrollytelling.Root>
           <section className='section flex'>
             <div style={{ 'height': '3600px' }}>
