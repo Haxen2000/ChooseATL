@@ -1,10 +1,10 @@
 import './section1.css';
 import * as Scrollytelling from '@bsmnt/scrollytelling';
 
-function IntroAnimation () {
+function Section1 () {
   return (
     <Scrollytelling.Root>
-      <section className='section flex'>
+      <section className='section section1 flex'>
         <Scrollytelling.Pin
           childHeight={'700px'}
           pinSpacerHeight={'4500px'}
@@ -43,4 +43,4 @@ function IntroAnimation () {
   )
 }
 
-export default IntroAnimation;
+export default Section1;
