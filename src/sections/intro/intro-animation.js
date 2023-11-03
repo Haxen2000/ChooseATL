@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
-import './intro.css';
 import { gsap } from 'gsap';
 import * as Scrollytelling from '@bsmnt/scrollytelling';
-
+import './intro.css';
+import { ReactComponent as AtlImg } from '../../assets/img/atl.svg';
 
 function IntroAnimation () {
   const app = useRef();
@@ -25,8 +25,17 @@ function IntroAnimation () {
       start: baseY,
     }
     const animationTime = 5;
-    const widthHeight = 550;
-    const backgroundSize = 730;
+    const repeat = 0; // -1 for infinite
+    const repeatDelay = 1;
+    const ease = 'power1.inOut';
+    const gsapProps = {
+      duration: animationTime,
+      repeat: repeat,
+      repeatDelay: repeatDelay,
+      ease: ease,
+    }
+    const widthHeight = 400;
+    const backgroundSize = 600;
 
     let ctx = gsap.context(() => {
       gsap.to('.c1', { // blue
@@ -85,14 +94,12 @@ function IntroAnimation () {
             width: widthHeight,
             height: widthHeight ,
             backgroundSize: backgroundSize,
+            backgroundPositionY: 0,
             zIndex: 10,
           },
           easeEach: 'none',
         },
-        duration: animationTime,
-        repeat: -1,
-        repeatDelay: 1,
-        ease: 'power1.inOut',
+        ...gsapProps
       });
       gsap.to('.c2', { // crimson
         keyframes: {
@@ -138,10 +145,7 @@ function IntroAnimation () {
           },
           easeEach: 'none',
         },
-        duration: animationTime,
-        repeat: -1,
-        repeatDelay: 1,
-        ease: 'power1.inOut',
+        ...gsapProps
       });
       gsap.to('.c3', { // gold
         keyframes: {
@@ -189,10 +193,10 @@ function IntroAnimation () {
           easeEach: 'none',
         },
         duration: animationTime * .95,
-        repeat: -1,
+        repeat: repeat,
         delay: animationTime * .05,
-        repeatDelay: 1 + animationTime * .05,
-        ease: 'power1.inOut',
+        repeatDelay: repeatDelay + animationTime * .05,
+        ease: ease,
       });
       gsap.to('.c4', { // hotpink
         keyframes: {
@@ -239,10 +243,7 @@ function IntroAnimation () {
           },
           easeEach: 'none',
         },
-        duration: animationTime,
-        repeat: -1,
-        repeatDelay: 1,
-        ease: 'power1.inOut',
+        ...gsapProps
       });
       gsap.to('.c5', { // limegreen
         keyframes: {
@@ -289,10 +290,7 @@ function IntroAnimation () {
           },
           easeEach: 'none',
         },
-        duration: animationTime,
-        repeat: -1,
-        repeatDelay: 1,
-        ease: 'power1.inOut',
+        ...gsapProps
       });
       gsap.to('.c6', { // maroon
         keyframes: {
@@ -354,10 +352,7 @@ function IntroAnimation () {
           },
           easeEach: 'none',
         },
-        duration: animationTime,
-        repeat: -1,
-        repeatDelay: 1,
-        ease: 'power1.inOut',
+        ...gsapProps
       });
       gsap.to('.c7', { // seagreen
         keyframes: {
@@ -378,8 +373,8 @@ function IntroAnimation () {
             zIndex: 6,
           },
           '40%': {
-            left: moveX.left,
-            top: moveY.bottom + 150,
+            left: moveX.left + 150,
+            top: moveY.bottom + 100,
             width: widthHeight * 1.25,
             height: widthHeight * 1.25,
             backgroundSize: backgroundSize * 1.25,
@@ -387,7 +382,7 @@ function IntroAnimation () {
           },
           '62%': {
             left: moveX.start - 25,
-            top: moveY.bottom + 150,
+            top: moveY.bottom + 100,
             width: widthHeight * 1.5,
             height: widthHeight * 1.5,
             backgroundSize: backgroundSize * 1.5,
@@ -411,10 +406,7 @@ function IntroAnimation () {
           },
           easeEach: 'none',
         },
-        duration: animationTime,
-        repeat: -1,
-        repeatDelay: 1,
-        ease: 'power1.inOut',
+        ...gsapProps
       });
       gsap.to('.c8', { // turquoise 
         keyframes: {
@@ -460,10 +452,36 @@ function IntroAnimation () {
           },
           easeEach: 'none',
         },
-        duration: animationTime,
-        // repeat: -1,
-        // repeatDelay: 1,
-        ease: 'power1.inOut',
+        ...gsapProps
+      });
+      gsap.to('.atl_logo', {
+        keyframes: {
+          '0%': { opacity: 1 },
+          '2%': { opacity: 0 },
+          '98%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        ...gsapProps
+      });
+
+      gsap.to('.c1', {
+        top: 0,
+        left: -600,
+        width: 1200,
+        height: 600,
+        backgroundSize: 1200,
+        backgroundPositionY: '-340px',
+        borderRadius: 25,
+        delay: animationTime,
+        duration: 2
+      });
+
+      gsap.to('.atl_logo', {
+        top: -90,
+        left: -700,
+        color: '#e12d2d',
+        delay: animationTime,
+        duration: 2
       });
     }, app);
     return () => ctx.revert();
@@ -485,6 +503,7 @@ function IntroAnimation () {
           <div class='circle c6'></div>
           <div class='circle c7'></div>
           <div class='circle c8'></div>
+          <AtlImg />
         </div>
       </Scrollytelling.Pin>
     </section>

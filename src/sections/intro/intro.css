@@ -5,8 +5,6 @@
 }
 
 .circle {
-  width: 550px;
-  height: 550px;
   border-radius: 550px;
   position: absolute;
   top: 100px;
@@ -18,41 +16,41 @@
 }
 
 .c1 {
-  background-color: blue;
-  background-image: url('../../assets/img/e8b00a5d10abb55d7fa519bf457fa532.png');
+  background-image: url('../../assets/img/4a09714c958f10bb46f628d9cef53f98.jpg');
 }
 
 .c2 {
-  background-color: crimson;
   background-image: url('../../assets/img/5921b06b38d761f2df804b2480ec09a9.png');
 }
 
 .c3 {
-  background-color: gold;
   background-image: url('../../assets/img/84680c6343e2810af49efb8baad76ddd.png');
 }
 
 .c4 {
-  background-color: hotpink;
   background-image: url('../../assets/img/e745a65643182c6f4775609570b73477.png');
 }
 
 .c5 {
-  background-color: limegreen;
   background-image: url('../../assets/img/41b3630d4432cf2ff527a934d8272076.png');
 }
 
 .c6 {
-  background-color: maroon;
   background-image: url('../../assets/img/d2b9d2c650496febb3c213f4ec608617.png');
 }
 
 .c7 {
-  background-color: seagreen;
   background-image: url('../../assets/img/8a22278a4d0500c18aecb077dc24db27.png');
 }
 
 .c8 {
-  background-color: turquoise;
   background-image: url('../../assets/img/dc5dad1a4100d27c41c709da161c042d.png');
+}
+
+.atl_logo {
+  position: absolute;
+  top: 263px;
+  left: -119px;
+  z-index: 100;
+  color: #fff;
 }
