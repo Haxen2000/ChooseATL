@@ -6,10 +6,68 @@ import { ReactComponent as AtlImg } from './assets/img/atl.svg';
 import IntroAnimation from './sections/intro/intro-animation';
 import Section1 from './sections/section1-part-of-this-place/section1';
 import Section2 from './sections/section2-text-img-scrolling/section2';
+import { useEffect, useRef } from "react";
+import { gsap } from 'gsap';
 
 function App() {
+  const introSectionRef = useRef();
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.set(".masker", { scale: 1, transformOrigin: "center" });
+      gsap.to('.test', {
+        top: -100,
+        width: 1200,
+        height: 700,
+        borderRadius: 25,
+        duration: 5
+      });
+      gsap.to('.masker', {
+        scale: 2.16,
+        duration: 5
+      });
+
+    }, introSectionRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="App">
+      <Scrollytelling.Root>
+        <section className='section flex' ref={introSectionRef}>
+          <Scrollytelling.Pin
+            childHeight={'655px'}
+            pinSpacerHeight={'3500px'}
+            top={200}
+          >
+            <div className='circle-text-change-anim flex'>
+              <div className='img-container relative'>
+                <div className='test relative' />
+              </div>
+              <svg id="demo" class='absolute' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+                <defs>
+                <clipPath id="theClipPath">
+                  <circle class="masker" cx="600" cy="378" r='277' width="1500" height="500" fill="red" />
+                </clipPath>  
+                </defs> 
+                <foreignObject x="0" y="350" width="1200" height="100">
+                  <div>
+                    <text class='quote'>You see that Atlanta isn't one thing. It's a multitude. And within it, there's a place for you.</text>
+                  </div>
+                </foreignObject>
+                {/* <circle class="masker" cx="600" cy="378" r='277' width="1500" height="500" fill="red" /> */}
+                <g clip-path="url(#theClipPath)">
+                  <foreignObject x="0" y="350" width="1200" height="100">
+                    <div>
+                      <text class='quote other'>You see that Atlanta isn't one thing. It's a multitude. And within it, there's a place for you.</text>
+                    </div>
+                  </foreignObject>
+                  </g>
+              </svg>
+            </div>
+          </Scrollytelling.Pin>
+        </section>
+      </Scrollytelling.Root>
       <div className='nav hidden'>
           <AtlImg />
         </div>
