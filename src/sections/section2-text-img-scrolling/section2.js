@@ -30,8 +30,8 @@ function Section2 () {
       <section className='section section2 flex'>
         <Scrollytelling.Pin
           childHeight={'700px'}
-          pinSpacerHeight={'4500px'}
-          top={100}
+          pinSpacerHeight={'9000px'}
+          top={'25vh'}
         >
           <div className='card'>
             <div className='column flex align-center'>
@@ -50,6 +50,26 @@ function Section2 () {
               </div>
             </div>
           </div>
+        </Scrollytelling.Pin>
+        <Scrollytelling.Pin
+          childHeight={'700px'}
+          pinSpacerHeight={'1500px'}
+          top={'35vh'}
+        >
+          <Scrollytelling.Animation tween={{ from: { opacity: 0 } }}>
+            <div className='card'>
+              <div className='column flex align-center'>
+                <div className='text-container'>
+                  <span className='title'>You're wondering, is Atlanta right for me?</span>
+                </div>
+              </div>
+              <div className='column flex align-center'>
+                <div className='text-container'>
+                  <span className='job'>Because coming here isn't about choosing a job. It's about making a home. And so you dig deeper, and you see the hundreds of thousands of acres of parks and trails. You see the array of neighborhoods, each with its own pace and style. You see the dozens of breweries and distilleries. You see the culture and diversity.</span>
+                </div>
+              </div>
+            </div>
+          </Scrollytelling.Animation>
         </Scrollytelling.Pin>
       </section>
     </Scrollytelling.Root>
