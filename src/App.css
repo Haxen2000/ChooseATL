@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Founders Grotesk';
   src: local('Founders Grotesk'),
-  url('./assets/fonts/Klim-Order-23100982/WOFF2/founders-grotesk-regular.woff2') format('woff2'),
+    url('./assets/fonts/Klim-Order-23100982/WOFF2/FoundersGroteskRegular.woff2') format('woff2'),
     url('./assets/fonts/Klim-Order-23100982/OTF/FoundersGrotesk-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
@@ -10,9 +10,9 @@
 @font-face {
   font-family: 'Resolve Sans';
   src: local('Resolve Sans'),
-  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/masifa_medium_macroman/masifa-medium-webfont.woff2') format('woff2'),
-  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/masifa_medium_macroman/masifa-medium-webfont.woff') format('woff'),
-  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Fonts/masifa-medium.otf') format('opentype');
+    url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/masifa_medium_macroman/masifa-medium-webfont.woff2') format('woff2'),
+    url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/masifa_medium_macroman/masifa-medium-webfont.woff') format('woff'),
+    url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Fonts/masifa-medium.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,9 +20,9 @@
 @font-face {
   font-family: 'Masifa Medium';
   src: local('Resolve Sans'),
-  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/resolvesansregular_regular_macroman/resolve-regular-webfont.woff2') format('woff2'),
-  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/resolvesansregular_regular_macroman/resolve-regular-webfont.woff') format('woff'),
-  url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Fonts/resolve-regular.otf') format('opentype');
+    url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/resolvesansregular_regular_macroman/resolve-regular-webfont.woff2') format('woff2'),
+    url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Web Fonts/resolvesansregular_regular_macroman/resolve-regular-webfont.woff') format('woff'),
+    url('./assets/fonts/My_Fontspring_Fonts_Order_86442622/Fonts/resolve-regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -291,8 +291,4 @@
 
 .circle-text-change-anim .test {
   margin: auto;
-}
-
-.masker {
-  transform-origin: center;
 }
