@@ -1,0 +1,24 @@
+.section3 .img-holder {
+  width: 554px;
+  height: 554px;
+  border-radius: 277px;
+  background-image: url('../../assets/img/6f5e84cc0e6bff05aa3d18445dfbe2fc.jpg');
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+.section3 .img-container {
+  width: 100%;
+  height: 700px;
+}
+
+.section3 .quote.other {
+  color: white;
+}
+
+.svg-mask {
+  top: -100px;
+  text-align: center;
+}

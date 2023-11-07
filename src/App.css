@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Founders Grotesk';
   src: local('Founders Grotesk'),
-    url('./assets/fonts/Klim-Order-23100982/WOFF2/FoundersGroteskRegular.woff2') format('woff2'),
+    url('./assets/fonts/Klim-Order-23100982/WOFF2/founders-grotesk-regular.woff2') format('woff2'),
     url('./assets/fonts/Klim-Order-23100982/OTF/FoundersGrotesk-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
@@ -114,6 +114,10 @@
 
 .align-center {
   align-items: center;
+}
+
+.absolute {
+  position: absolute;
 }
 
 .relative {
@@ -251,44 +255,4 @@
   color: #e12d2d;
   top: 3px;
   left: 62px;
-}
-
-.test {
-  width: 554px;
-  height: 554px;
-  border-radius: 277px;
-  background-image: url('./assets/img/6f5e84cc0e6bff05aa3d18445dfbe2fc.jpg');
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.quote.absolute {
-  top: 100px;
-}
-
-.other {
-  color: white;
-}
-
-#demo {
-  top: -100px;
-  text-align: center;
-}
-
-.circle-text-change-anim {
-  width: 1200px;
-}
-
-.circle-text-change-anim .img-container {
-  width: 100%;
-  height: 700px;
-}
-
-.circle-text-change-anim .test {
-  margin: auto;
 }

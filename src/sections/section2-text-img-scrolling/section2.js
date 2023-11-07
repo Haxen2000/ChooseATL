@@ -13,7 +13,7 @@ function Section2 () {
   for (let i = 0; i < 6; i++) {
     imgHolders.push(
       <div className='ani-relative o-hidden relative' style={{ top: -439 * i }}>
-        <Scrollytelling.Animation tween={{ start: 100 / 6 * (i), end: (i === 0 ? 0 : 100 / 6 * (i + 1)), from: { top: 440 } }}>
+        <Scrollytelling.Animation tween={{ start: 100 / 7 * (i), end: (i === 0 ? 0 : 100 / 7 * (i + 1)), from: { top: 440 } }}>
           <img src={images[i]} alt='alt' style={{
             width: '604px',
             height: '435px',
@@ -26,53 +26,59 @@ function Section2 () {
   }
 
   return (
-    <Scrollytelling.Root>
-      <section className='section section2 flex'>
-        <Scrollytelling.Pin
-          childHeight={'700px'}
-          pinSpacerHeight={'9000px'}
-          top={'25vh'}
-        >
-          <div className='card'>
-            <div className='column flex align-center'>
-              <div className='text-container flex flex-wrap'>
-                <Scrollytelling.Animation tween={{ start: 40, end: 50, to: { opacity: 0 } }}>
-                  <span className='job'>Yes, it's a bustling job market complete with Fortune 500 corporations, startup incubators, world-leading financial tech, and nonstop film and TV production.</span>
-                </Scrollytelling.Animation>
-                <Scrollytelling.Animation tween={{ start: 40, end: 50, from: { top: 1440 } }}>
-                  <span className='job'>But it's also serene, walkable neighborhoods. It's six major sports teams and their rabid fan bases. But it's also the lifetime bonds formed within cycling clubs, softball teams, and improv troupes.</span>
-                </Scrollytelling.Animation>
-              </div>
-            </div>
-            <div className='column'>
-              <div className='img-container'>
-                {imgHolders.map((i) =>  i)}
-              </div>
-            </div>
-          </div>
-        </Scrollytelling.Pin>
-        <Scrollytelling.Pin
-          childHeight={'700px'}
-          pinSpacerHeight={'1500px'}
-          top={'35vh'}
-        >
-          <Scrollytelling.Animation tween={{ from: { opacity: 0 } }}>
+    <>
+      <Scrollytelling.Root>
+        <section className='section section2-1 flex'>
+          <Scrollytelling.Pin
+            childHeight={'700px'}
+            pinSpacerHeight={'8000px'}
+            top={'25vh'}
+          >
             <div className='card'>
               <div className='column flex align-center'>
-                <div className='text-container'>
-                  <span className='title'>You're wondering, is Atlanta right for me?</span>
+                <div className='text-container flex flex-wrap'>
+                  <Scrollytelling.Animation tween={{ start: 40, end: 50, to: { opacity: 0 } }}>
+                    <span className='job'>Yes, it's a bustling job market complete with Fortune 500 corporations, startup incubators, world-leading financial tech, and nonstop film and TV production.</span>
+                  </Scrollytelling.Animation>
+                  <Scrollytelling.Animation tween={{ start: 40, end: 50, from: { top: 1440 } }}>
+                    <span className='job'>But it's also serene, walkable neighborhoods. It's six major sports teams and their rabid fan bases. But it's also the lifetime bonds formed within cycling clubs, softball teams, and improv troupes.</span>
+                  </Scrollytelling.Animation>
                 </div>
               </div>
-              <div className='column flex align-center'>
-                <div className='text-container'>
-                  <span className='job'>Because coming here isn't about choosing a job. It's about making a home. And so you dig deeper, and you see the hundreds of thousands of acres of parks and trails. You see the array of neighborhoods, each with its own pace and style. You see the dozens of breweries and distilleries. You see the culture and diversity.</span>
+              <div className='column'>
+                <div className='img-container'>
+                  {imgHolders.map((i) =>  i)}
                 </div>
               </div>
             </div>
-          </Scrollytelling.Animation>
-        </Scrollytelling.Pin>
-      </section>
-    </Scrollytelling.Root>
+          </Scrollytelling.Pin>
+        </section>
+      </Scrollytelling.Root>
+      <Scrollytelling.Root>
+        <section className='section section2-2 flex'>
+          <Scrollytelling.Pin
+            childHeight={'700px'}
+            pinSpacerHeight={'2000px'}
+            top={'35vh'}
+          >
+            <Scrollytelling.Animation tween={{ start: 0, end: 50, from: { opacity: 0.1 } }}>
+              <div className='card'>
+                <div className='column flex align-center'>
+                  <div className='text-container'>
+                    <span className='title'>You're wondering, is Atlanta right for me?</span>
+                  </div>
+                </div>
+                <div className='column flex align-center'>
+                  <div className='text-container'>
+                    <span className='job'>Because coming here isn't about choosing a job. It's about making a home. And so you dig deeper, and you see the hundreds of thousands of acres of parks and trails. You see the array of neighborhoods, each with its own pace and style. You see the dozens of breweries and distilleries. You see the culture and diversity.</span>
+                  </div>
+                </div>
+              </div>
+            </Scrollytelling.Animation>
+          </Scrollytelling.Pin>
+        </section>
+      </Scrollytelling.Root>
+    </>
   )
 }
       

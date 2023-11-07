@@ -1,19 +1,20 @@
-.section2 .card {
+.section2-1 .card,
+.section2-2 .card {
   height: auto;
 }
 
-.section2 .text-container .job:first-child {
+.section2-1 .text-container .job:first-child {
   top: 56px;
 }
 
-.section2 .text-container .job:last-child {
+.section2-1 .text-container .job:last-child {
   top: -42px;
 }
 
-.section2 .job {
+.section2-1 .job {
   position: relative;
 }
 
-.section2 .img-container {
+.section2-1 .img-container {
   height: 435px;
 }
