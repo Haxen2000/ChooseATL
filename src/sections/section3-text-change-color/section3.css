@@ -18,6 +18,10 @@
   color: white;
 }
 
+.section3 .circle-text-change-anim {
+  width: 1200px;
+}
+
 .svg-mask {
   top: -100px;
   text-align: center;

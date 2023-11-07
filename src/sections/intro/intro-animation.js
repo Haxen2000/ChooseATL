@@ -7,7 +7,7 @@ function IntroAnimation () {
   const introSectionRef = useRef();
 
   useEffect(() => {
-    const baseX = -250;
+    const baseX = -200;
     const moveX = {
       small: baseX / 4,
       // left: baseX - baseX * 1.4,
@@ -476,8 +476,8 @@ function IntroAnimation () {
       });
 
       gsap.to('.atl_logo', {
-        top: -80,
-        left: -700,
+        top: 3,
+        left: 62,
         color: '#e12d2d',
         delay: animationTime,
         duration: 2,

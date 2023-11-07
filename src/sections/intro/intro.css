@@ -1,8 +1,6 @@
 .circle {
   border-radius: 550px;
   position: absolute;
-  top: 100px;
-  left: -250px;
   background-position: 50%;
   background-size: 730px;
   background-repeat: no-repeat;
@@ -40,10 +38,10 @@
   background-image: url('../../assets/img/dc5dad1a4100d27c41c709da161c042d.png');
 }
 
-.atl_logo {
-  position: absolute;
-  top: 263px;
-  left: -119px;
+.square-move .atl_logo {
+  position: fixed;
+  top: 315px;
+  left: 44.0%;
   z-index: 100;
   color: #fff;
 }
