@@ -456,7 +456,7 @@ function IntroAnimation () {
       gsap.to('.atl_logo', {
         keyframes: {
           '0%': { opacity: 1 },
-          '2%': { opacity: 0 },
+          '5%': { opacity: 0 },
           '98%': { opacity: 0 },
           '100%': { opacity: 1 },
         },
@@ -464,7 +464,7 @@ function IntroAnimation () {
       });
 
       gsap.to('.c1', {
-        top: 0,
+        top: 25,
         left: -600,
         width: 1200,
         height: 600,

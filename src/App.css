@@ -142,7 +142,7 @@
   overflow: hidden;
 }
 
-.card .column {
+.column {
   width: 50%;
 }
 
@@ -256,4 +256,12 @@
   top: 3px;
   left: 62px;
   position: absolute;
+}
+
+footer {
+  height: 250px;
+  background-color: #177BD0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

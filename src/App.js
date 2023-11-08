@@ -3,6 +3,7 @@ import * as Scrollytelling from '@bsmnt/scrollytelling';
 import img5 from './assets/img/ac8c1be75ebcccbd92c43d1511d267e3.jpg';
 import img6 from './assets/img/4ad255d5c81ceb123336519ea6a3a8c7.jpg';
 import { ReactComponent as AtlImg } from './assets/img/atl.svg';
+import { ReactComponent as AtlWYBImg } from './assets/img/atlwyb.svg';
 import IntroAnimation from './sections/intro/intro-animation';
 import Section1 from './sections/section1-part-of-this-place/section1';
 import Section2 from './sections/section2-text-img-scrolling/section2';
@@ -170,6 +171,9 @@ function App() {
             </div>
           </section>
         </Scrollytelling.Root> */}
+        <footer>
+          <AtlWYBImg alt='Atlanta: Where You Belong' />
+        </footer>
       </div>
     </div>
   );
