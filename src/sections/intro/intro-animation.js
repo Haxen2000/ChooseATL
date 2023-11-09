@@ -2,13 +2,13 @@ import { useEffect, useRef } from "react";
 import { gsap } from 'gsap';
 import './intro.css';
 import { ReactComponent as AtlImg } from '../../assets/img/atl.svg';
-import video from '../../assets/video/RoughCut04a_231108.mp4';
 import AtlWYBCirImg from '../../assets/img/atlwyb-circle.svg';
 import AtlWYBImg from '../../assets/img/atlwyb.svg';
 
 
 function IntroAnimation () {
   const introSectionRef = useRef();
+  const videoRef = useRef();
 
   useEffect(() => {
     const baseX = -200;
@@ -537,8 +537,8 @@ function IntroAnimation () {
               <span>Play Video</span>
               <div className='arrow-right'></div>
             </div>
-            <video width='1200' height='600' controls className='hidden absolute'>
-              <source src={video} type='video/mp4' />
+            <video width='1200' height='600' controls className='hidden absolute' ref={videoRef}>
+              <source src='https://atl-assets.s3.amazonaws.com/video/RoughCut04a_231108.mp4' type='video/mp4' />
             </video>
           </div>
         </div>
