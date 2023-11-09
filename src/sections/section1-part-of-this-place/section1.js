@@ -7,24 +7,24 @@ function Section1 () {
       <section className='section section1 flex'>
         <Scrollytelling.Pin
           childHeight={'700px'}
-          pinSpacerHeight={'4500px'}
+          pinSpacerHeight={'3500px'}
           top={100}
         >
           <div className='card'>
             <div className='column'>
               <div className='img-container'>
-                <div className='ani-relative o-hidden'>
-                  <Scrollytelling.Animation tween={{ start: 0, end: 33, to: { left: -50 } }}>
+                <div className='ani-relative o-hidden img1-holder'>
+                  <Scrollytelling.Animation tween={{ start: 0, end: 25, to: { left: 0 } }}>
                     <div className='img img1' />
                   </Scrollytelling.Animation>
                 </div>
                 <div className='ani-relative o-hidden img2-holder'>
-                  <Scrollytelling.Animation tween={{ start: 33, end: 66, to: { left: 180 } }}>
+                  <Scrollytelling.Animation tween={{ start: 25, end: 50, to: { left: 220 } }}>
                     <div className='img img2' />
                   </Scrollytelling.Animation>
                 </div>
                 <div className='ani-relative o-hidden img3-holder'>
-                  <Scrollytelling.Animation tween={{ start: 66, end: 100, to: { left: 20 } }}>
+                  <Scrollytelling.Animation tween={{ start: 50, end: 75, to: { left: 20 } }}>
                     <div className='img img3' />
                   </Scrollytelling.Animation>
                 </div>

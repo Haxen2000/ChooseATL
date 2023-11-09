@@ -133,7 +133,7 @@
 }
 
 .card {
-  width: 1220px;
+  /* width: 1220px; */
   height: 655px;
   /* margin-top: 200px; */
   border-radius: 26px;
@@ -235,7 +235,7 @@
 }
 
 .scrolly-telling-container {
-  max-width: 1220px;
+  max-width: 1280px;
   margin: auto;
 }
 

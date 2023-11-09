@@ -494,9 +494,10 @@ function IntroAnimation () {
       });
 
       gsap.to('.atl_logo', {
-        top: 13,
-        left: 62,
-        color: '#e12d2d',
+        // top: 13,
+        // left: 62,
+        // color: '#e12d2d',
+        opacity: 0,
         delay: animationTime + delayTime * 2,
         duration: 2,
         onComplete: () => {

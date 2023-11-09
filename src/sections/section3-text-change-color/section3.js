@@ -42,14 +42,14 @@ function Section3 () {
               </defs> 
               <foreignObject x="0" y="350" width="1200" height="100">
                 <div>
-                  <text class='quote'>You see that Atlanta isn't one thing. It's a multitude. And within it, there's a place for you.</text>
+                  <text class='quote'>You see that Atlanta isn't one thing. <br/>It's a multitude. Find your place in 2024.</text>
                 </div>
               </foreignObject>
               {/* <circle class="masker" cx="600" cy="378" r='277' width="1500" height="500" fill="red" /> */}
               <g clip-path="url(#theClipPath)">
                 <foreignObject x="0" y="350" width="1200" height="100">
                   <div>
-                    <text class='quote other'>You see that Atlanta isn't one thing. It's a multitude. And within it, there's a place for you.</text>
+                    <text class='quote other'>You see that Atlanta isn't one thing. <br/>It's a multitude. Find your place in 2024.</text>
                   </div>
                 </foreignObject>
               </g>

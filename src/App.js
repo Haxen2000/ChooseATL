@@ -171,10 +171,10 @@ function App() {
             </div>
           </section>
         </Scrollytelling.Root> */}
-        <footer>
-          <AtlWYBImg alt='Atlanta: Where You Belong' />
-        </footer>
       </div>
+      <footer>
+        <AtlWYBImg alt='Atlanta: Where You Belong' />
+      </footer>
     </div>
   );
 }

@@ -31,8 +31,8 @@ function Section2 () {
         <section className='section section2-1 flex'>
           <Scrollytelling.Pin
             childHeight={'700px'}
-            pinSpacerHeight={'8000px'}
-            top={'25vh'}
+            pinSpacerHeight={'6000px'}
+            top={'20vh'}
           >
             <div className='card'>
               <div className='column flex align-center'>

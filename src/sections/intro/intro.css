@@ -72,28 +72,28 @@
 .square-move .atl_logo,
 .square-move .atl-wyb,
 .square-move .atl-wyb-cir {
-  position: fixed;
+  position: absolute;
   z-index: 100;
   color: #fff;
 }
 
 .square-move .atl_logo {
-  top: 319px;
-  left: 39.5%;
+  top: 219px;
+  left: -150px;
   width: 138px;
   opacity: 0;
 }
 
 .square-move .atl-wyb {
-  top: 315px;
-  left: 39.5%;
+  top: 215px;
+  left: -150px;
   width: 300px;
   opacity: 0;
 }
 
 .square-move .atl-wyb-cir {
-  left: 41.5%;
-  top: 280px;
+  left: -125px;
+  top: 180px;
 }
 
 video {

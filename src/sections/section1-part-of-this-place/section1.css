@@ -4,17 +4,21 @@
   background-repeat: no-repeat;
 }
 
+.section1 .img1-holder {
+  margin-top: 20px;
+}
+
 .section1 .img1 {
   background-image: url('../../assets/img/0e3c4cfea33874c54366a8990fd6cf65.jpg');
   background-size: cover;
-  background-position-y: -80px;
+  background-position-y: -110px;
   width: 332px;
   height: 332px;
   border-radius: 332px;
 }
 
 .section1 .img2-holder {
-  margin-top: -250px;
+  margin-top: -350px;
 }
 
 .section1 .img2 {
@@ -27,7 +31,7 @@
 }
 
 .section1 .img3-holder {
-  margin-top: -220px;
+  margin-top: -190px;
 }
 
 .section1 .img3 {
