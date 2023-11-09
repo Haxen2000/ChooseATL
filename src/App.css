@@ -241,6 +241,7 @@
 
 .hidden {
   height: 0 !important;
+  width: 0 !important;
   overflow: hidden;
 }
 
@@ -253,9 +254,10 @@
 
 .nav .atl_logo {
   color: #e12d2d;
-  top: 3px;
+  top: 13px;
   left: 62px;
   position: absolute;
+  width: 138px;
 }
 
 footer {

@@ -2,6 +2,10 @@ import { useEffect, useRef } from "react";
 import { gsap } from 'gsap';
 import './intro.css';
 import { ReactComponent as AtlImg } from '../../assets/img/atl.svg';
+import video from '../../assets/video/RoughCut04a_231108.mp4';
+import AtlWYBCirImg from '../../assets/img/atlwyb-circle.svg';
+import AtlWYBImg from '../../assets/img/atlwyb.svg';
+
 
 function IntroAnimation () {
   const introSectionRef = useRef();
@@ -94,7 +98,7 @@ function IntroAnimation () {
             height: widthHeight ,
             backgroundSize: backgroundSize,
             backgroundPositionY: 0,
-            zIndex: 10,
+            zIndex: 12,
           },
           easeEach: 'none',
         },
@@ -453,10 +457,16 @@ function IntroAnimation () {
         },
         ...gsapProps
       });
-      gsap.to('.atl_logo', {
+      gsap.to('.atl-wyb-cir', {
         keyframes: {
           '0%': { opacity: 1 },
-          '5%': { opacity: 0 },
+          '10%': { opacity: 0 },
+        },
+        ...gsapProps
+      });
+      gsap.to('.atl-wyb, .atl_logo', {
+        keyframes: {
+          '0': { opacity: 0 },
           '98%': { opacity: 0 },
           '100%': { opacity: 1 },
         },
@@ -464,7 +474,7 @@ function IntroAnimation () {
       });
 
       gsap.to('.c1', {
-        top: 25,
+        top: 20,
         left: -600,
         width: 1200,
         height: 600,
@@ -475,16 +485,27 @@ function IntroAnimation () {
         duration: 2
       });
 
+      gsap.to('.atl-wyb', {
+        opacity: 0,
+        delay: animationTime,
+        duration: 2,
+      });
+
       gsap.to('.atl_logo', {
-        top: 3,
+        top: 13,
         left: 62,
         color: '#e12d2d',
         delay: animationTime,
         duration: 2,
         onComplete: () => {
-          document.querySelector('.square-move .atl_logo').setAttribute('class', 'atl_logo hidden');
-          document.querySelector('.scrolly-telling-container').setAttribute('class', 'scrolly-telling-container');
-          document.querySelector('.nav').setAttribute('class', 'nav');
+          document.querySelector('.square-move .atl_logo').classList.add('hidden');
+          document.querySelector('.scrolly-telling-container').classList.remove('hidden');
+          document.querySelector('.nav').classList.remove('hidden');
+          document.querySelector('.play').classList.remove('hidden');
+          document.querySelectorAll('.circle:not(.c1, .play)').forEach((e) => {
+            e.classList.add('hidden');
+          });
+          // document.querySelector('video').setAttribute('class', '');
         }
       });
     }, introSectionRef);
@@ -493,8 +514,8 @@ function IntroAnimation () {
 
   return (
     <section className='section flex' ref={introSectionRef}>
-      <div style={{ height: '100vh' }}>
-        <div style={{ height: '700px', position: 'sticky', top: '100px' }}>
+      <div style={{ height: '170vh' }}>
+        <div style={{ height: '900px', position: 'sticky', top: '100px' }}>
           <div className='flex square-move o-hidden'>
             <div className='circle c1'></div>
             <div className='circle c2'></div>
@@ -504,7 +525,21 @@ function IntroAnimation () {
             <div className='circle c6'></div>
             <div className='circle c7'></div>
             <div className='circle c8'></div>
+            <img src={AtlWYBCirImg} alt='Atlanta - Where You Belong' className='atl-wyb-cir' />
+            <img src={AtlWYBImg} alt='Atlanta - Where You Belong' className='atl-wyb' />
             <AtlImg />
+            <div className='circle play flex align-center hidden' onClick={() => {
+              const video = document.querySelector('video');
+              video.classList.remove('hidden');
+              document.querySelector('.c1').classList.add('hidden');
+              video.play();
+            }}>
+              <span>Play Video</span>
+              <div className='arrow-right'></div>
+            </div>
+            <video width='1200' height='600' controls className='hidden absolute'>
+              <source src={video} type='video/mp4' />
+            </video>
           </div>
         </div>
       </div>

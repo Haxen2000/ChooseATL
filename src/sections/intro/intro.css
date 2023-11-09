@@ -38,10 +38,63 @@
   background-image: url('../../assets/img/dc5dad1a4100d27c41c709da161c042d.png');
 }
 
-.square-move .atl_logo {
+.play {
+  width: 150px;
+  height: 150px;
+  background-color: #E12D2D;
+  font-family: 'Founders Grotesk';
+  font-size: 16px;
+  color: #fff;
+  z-index: 100;
+  justify-content: center;
+  cursor: pointer;
+  left: -75px;
+  top: 270px;
+}
+
+.play span {
+  padding-right: 5px;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 9px solid white;
+}
+
+.square-move .atl_logo,
+.square-move .atl-wyb,
+.square-move .atl-wyb-cir {
   position: fixed;
-  top: 315px;
-  left: 44.0%;
   z-index: 100;
   color: #fff;
+}
+
+.square-move .atl_logo {
+  top: 319px;
+  left: 39.5%;
+  width: 138px;
+}
+
+.square-move .atl-wyb {
+  top: 315px;
+  left: 39.5%;
+  width: 300px;
+}
+
+.square-move .atl-wyb-cir {
+  left: 41%;
+  top: 280px;
+}
+
+video {
+  z-index: 100;
+  left: -600px;
+  top: 20px;
+}
+
+video[poster] {
+  object-fit: cover;
 }
