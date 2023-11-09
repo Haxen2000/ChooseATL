@@ -467,6 +467,10 @@ function IntroAnimation () {
         ...gsapProps
       });
       gsap.to('.atl-wyb, .atl_logo', {
+        onStart:() => {
+          console.log(window.outerWidth);
+          document.querySelector('.square-move .atl_logo').style.left = window.outerWidth / 2 - 168;
+        },
         keyframes: {
           '0': { opacity: 0 },
           '98%': { opacity: 0 },
@@ -494,21 +498,19 @@ function IntroAnimation () {
       });
 
       gsap.to('.atl_logo', {
-        // top: 13,
-        // left: 62,
-        // color: '#e12d2d',
-        opacity: 0,
+        top: 13,
+        left: 62,
+        color: '#e12d2d',
+        // opacity: 0,
         delay: animationTime + delayTime * 2,
         duration: 2,
         onComplete: () => {
-          document.querySelector('.square-move .atl_logo').classList.add('hidden');
-          document.querySelector('.scrolly-telling-container').classList.remove('hidden');
-          document.querySelector('.nav').classList.remove('hidden');
-          document.querySelector('.play').classList.remove('hidden');
-          document.querySelectorAll('.circle:not(.c1, .play)').forEach((e) => {
+          document.querySelectorAll('.scrolly-telling-container, .nav, .play, footer').forEach((e) => {
+            e.classList.remove('hidden');
+          });
+          document.querySelectorAll('.square-move .atl_logo, .circle:not(.c1, .play)').forEach((e) => {
             e.classList.add('hidden');
           });
-          // document.querySelector('video').setAttribute('class', '');
         }
       });
     }, introSectionRef);

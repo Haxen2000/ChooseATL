@@ -12,7 +12,7 @@ function Section2 () {
   const imgHolders = [];
   for (let i = 0; i < 6; i++) {
     imgHolders.push(
-      <div className='ani-relative o-hidden relative' style={{ top: -439 * i }}>
+      <div className='ani-relative o-hidden relative' style={{ top: -439 * i }} key={i}>
         <Scrollytelling.Animation tween={{ start: 100 / 7 * (i), end: (i === 0 ? 0 : 100 / 7 * (i + 1)), from: { top: 440 } }}>
           <img src={images[i]} alt='alt' style={{
             width: '604px',

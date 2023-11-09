@@ -78,8 +78,8 @@
 }
 
 .square-move .atl_logo {
-  top: 219px;
-  left: -150px;
+  position: fixed;
+  top: 313px;
   width: 138px;
   opacity: 0;
 }

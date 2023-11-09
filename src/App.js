@@ -172,7 +172,7 @@ function App() {
           </section>
         </Scrollytelling.Root> */}
       </div>
-      <footer>
+      <footer className='hidden'>
         <AtlWYBImg alt='Atlanta: Where You Belong' />
       </footer>
     </div>

@@ -32,24 +32,24 @@ function Section3 () {
                 <div className='img-holder relative' />
               </Scrollytelling.Animation>
             </div>
-            <svg class='svg-mask absolute' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+            <svg className='svg-mask absolute' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
               <defs>
                 <clipPath id="theClipPath">
                   <Scrollytelling.Animation tween={{ start: 0, end: 100, to: { scale: 2.16 } }}>
-                    <circle class="masker" cx="600" cy="378" r='277' width="1500" height="500" fill="red" />
+                    <circle className="masker" cx="600" cy="378" r='277' width="1500" height="500" fill="red" />
                   </Scrollytelling.Animation>
                 </clipPath>
               </defs> 
               <foreignObject x="0" y="350" width="1200" height="100">
                 <div>
-                  <text class='quote'>You see that Atlanta isn't one thing. <br/>It's a multitude. Find your place in 2024.</text>
+                  <span className='quote'>You see that Atlanta isn't one thing. <br/>It's a multitude. Find your place in 2024.</span>
                 </div>
               </foreignObject>
-              {/* <circle class="masker" cx="600" cy="378" r='277' width="1500" height="500" fill="red" /> */}
-              <g clip-path="url(#theClipPath)">
+              {/* <circle className="masker" cx="600" cy="378" r='277' width="1500" height="500" fill="red" /> */}
+              <g clipPath="url(#theClipPath)">
                 <foreignObject x="0" y="350" width="1200" height="100">
                   <div>
-                    <text class='quote other'>You see that Atlanta isn't one thing. <br/>It's a multitude. Find your place in 2024.</text>
+                    <span className='quote other'>You see that Atlanta isn't one thing. <br/>It's a multitude. Find your place in 2024.</span>
                   </div>
                 </foreignObject>
               </g>
