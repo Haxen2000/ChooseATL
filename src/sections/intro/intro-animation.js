@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import './intro.css';
 import { ReactComponent as AtlImg } from '../../assets/img/atl.svg';
 import AtlWYBCirImg from '../../assets/img/atlwyb-circle.svg';
-import AtlWYBImg from '../../assets/img/atlwyb.svg';
+import AtlWYBImg from '../../assets/img/atlwyb-noatl.svg';
 
 
 function IntroAnimation () {
@@ -28,6 +28,7 @@ function IntroAnimation () {
       start: baseY,
     }
     const animationTime = 5;
+    const delayTime = 2;
     const repeat = 0; // -1 for infinite
     const repeatDelay = 1;
     const ease = 'power1.inOut';
@@ -36,6 +37,7 @@ function IntroAnimation () {
       repeat: repeat,
       repeatDelay: repeatDelay,
       ease: ease,
+      delay: delayTime,
     }
     const widthHeight = 400;
     const backgroundSize = 600;
@@ -197,7 +199,7 @@ function IntroAnimation () {
         },
         duration: animationTime * .95,
         repeat: repeat,
-        delay: animationTime * .05,
+        delay: animationTime * .05 + delayTime,
         repeatDelay: repeatDelay + animationTime * .05,
         ease: ease,
       });
@@ -481,13 +483,13 @@ function IntroAnimation () {
         backgroundSize: 1200,
         backgroundPositionY: '-340px',
         borderRadius: 25,
-        delay: animationTime,
+        delay: animationTime + delayTime * 2,
         duration: 2
       });
 
       gsap.to('.atl-wyb', {
         opacity: 0,
-        delay: animationTime,
+        delay: animationTime + delayTime * 2,
         duration: 2,
       });
 
@@ -495,7 +497,7 @@ function IntroAnimation () {
         top: 13,
         left: 62,
         color: '#e12d2d',
-        delay: animationTime,
+        delay: animationTime + delayTime * 2,
         duration: 2,
         onComplete: () => {
           document.querySelector('.square-move .atl_logo').classList.add('hidden');

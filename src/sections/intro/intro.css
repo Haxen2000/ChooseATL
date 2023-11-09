@@ -2,12 +2,17 @@
   border-radius: 550px;
   position: absolute;
   background-position: 50%;
-  background-size: 730px;
+  background-size: 600px;
   background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  top: 100px;
 }
 
 .c1 {
   background-image: url('../../assets/img/4a09714c958f10bb46f628d9cef53f98.jpg');
+  z-index: 10;
 }
 
 .c2 {
@@ -76,16 +81,18 @@
   top: 319px;
   left: 39.5%;
   width: 138px;
+  opacity: 0;
 }
 
 .square-move .atl-wyb {
   top: 315px;
   left: 39.5%;
   width: 300px;
+  opacity: 0;
 }
 
 .square-move .atl-wyb-cir {
-  left: 41%;
+  left: 41.5%;
   top: 280px;
 }
 
