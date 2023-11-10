@@ -2,7 +2,7 @@
   width: 554px;
   height: 554px;
   border-radius: 277px;
-  background-image: url('../../assets/img/6f5e84cc0e6bff05aa3d18445dfbe2fc.jpg');
+  background-image: url('../../assets/img/a8fd116b30519773596fa0a2377e9de5.png');
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -25,4 +25,16 @@
 .svg-mask {
   top: -100px;
   text-align: center;
+}
+
+.anim-text-holder {
+  margin: 10px auto 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.anim-text {
+  padding: 10px 15px;
+  white-space: nowrap;
 }

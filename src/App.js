@@ -173,7 +173,7 @@ function App() {
         </Scrollytelling.Root> */}
       </div>
       <footer className='hidden'>
-        <AtlWYBImg alt='Atlanta: Where You Belong' />
+        <AtlWYBImg alt='Atlanta: Where You Belong' height='150' />
       </footer>
     </div>
   );

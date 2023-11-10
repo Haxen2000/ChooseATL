@@ -484,8 +484,9 @@ function IntroAnimation () {
         left: -600,
         width: 1200,
         height: 600,
-        backgroundSize: 1200,
-        backgroundPositionY: '-340px',
+        backgroundSize: 1200 * 1.39468,
+        backgroundPositionX: '-113px',
+        backgroundPositionY: '-147.079px',
         borderRadius: 25,
         delay: animationTime + delayTime * 2,
         duration: 2
@@ -545,6 +546,7 @@ function IntroAnimation () {
             <video width='1200' height='600' controls className='hidden absolute' ref={videoRef}>
               <source src='https://atl-assets.s3.amazonaws.com/video/RoughCut04a_231108.mp4' type='video/mp4' />
             </video>
+            {/* <div><span>Scroll for the story</span></div> */}
           </div>
         </div>
       </div>

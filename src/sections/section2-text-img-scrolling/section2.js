@@ -1,11 +1,11 @@
 import './section2.css';
 import * as Scrollytelling from '@bsmnt/scrollytelling';
 import img1 from '../../assets/img/02e08baea97db281f6074e0d29fcf2e1.jpg';
-import img2 from '../../assets/img/3fca7212215a599416cd2d027a97dfff.jpg';
+import img2 from '../../assets/img/cf58a3f729bd67eb71335d4286b1332b.jpg';
 import img3 from '../../assets/img/e60fb9599768963379a081f719323db0.jpg';
-import img4 from '../../assets/img/a8e83971a57f346a3689af5290781653.jpg';
+import img4 from '../../assets/img/d2da87aabefd76d686b160798b68a5ee.jpg';
 import img5 from '../../assets/img/3166464d7cd087180df03cd3da1b18f5.jpg';
-import img6 from '../../assets/img/3ac4f47ae1a062ba8627b7ef8e599296.jpg';
+import img6 from '../../assets/img/6b073a100c44d7544535d777d27930e7.jpg';
 
 function Section2 () {
   const images = [img1, img2, img3, img4, img5, img6];
@@ -61,11 +61,11 @@ function Section2 () {
             pinSpacerHeight={'2000px'}
             top={'35vh'}
           >
-            <Scrollytelling.Animation tween={{ start: 0, end: 50, from: { opacity: 0.1 } }}>
+            <Scrollytelling.Animation tween={{ start: 0, end: 30, from: { opacity: 0.1 } }}>
               <div className='card'>
                 <div className='column flex align-center'>
                   <div className='text-container'>
-                    <span className='title'>You're wondering, is Atlanta right for me?</span>
+                    <span className='title'>You're wondering, is Atlanta <span className='phoenix-txt'>right for me?</span></span>
                   </div>
                 </div>
                 <div className='column flex align-center'>
