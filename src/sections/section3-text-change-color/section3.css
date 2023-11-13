@@ -3,10 +3,11 @@
   height: 554px;
   border-radius: 277px;
   background-image: url('../../assets/img/a8fd116b30519773596fa0a2377e9de5.png');
-  background-size: cover;
-  background-position: 50%;
+  background-size: 250% 162.037%;
+  background-position: -500px -190px;
   background-repeat: no-repeat;
   margin: auto;
+  filter: brightness(80%);
 }
 
 .section3 .img-container {
