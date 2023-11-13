@@ -69,7 +69,7 @@
   justify-content: center;
   cursor: pointer;
   left: -75px;
-  top: 270px;
+  top: 250px;
 }
 
 .play span {
@@ -77,11 +77,21 @@
 }
 
 .arrow-right {
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
   border-left: 9px solid white;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #000;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .square-move .atl-wyb-cir {
@@ -120,4 +130,10 @@ video {
   z-index: 100;
   left: -600px;
   top: 20px;
+}
+
+.scroll-story {
+  bottom: 90px;
+  width: 240px;
+  left: calc(50% - 120px);
 }

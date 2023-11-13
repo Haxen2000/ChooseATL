@@ -506,7 +506,7 @@ function IntroAnimation () {
         delay: animationTime + delayTime * 2,
         duration: 2,
         onComplete: () => {
-          document.querySelectorAll('.scrolly-telling-container, .nav, .play, footer').forEach((e) => {
+          document.querySelectorAll('.scrolly-telling-container, .nav, .play, footer, .scroll-story').forEach((e) => {
             e.classList.remove('hidden');
           });
           document.querySelectorAll('.square-move .atl_logo, .circle:not(.c1, .play)').forEach((e) => {
@@ -515,14 +515,29 @@ function IntroAnimation () {
           document.body.classList.add('ofauto');
         }
       });
+
+      gsap.to('.arrow-down', {
+        keyframes: {
+          '33%': {
+            y: -10,
+            ease: ease,
+          },
+          '66%': {
+            y: 0,
+            ease: 'Bounce.easeOut',
+          },
+        },
+        duration: 3,
+        repeat: -1,
+      })
     }, introSectionRef);
     return () => ctx.revert();
   }, []);
 
   return (
     <section className='section flex' ref={introSectionRef}>
-      <div style={{ height: '140vh' }}>
-        <div style={{ height: '900px', position: 'sticky', top: '100px' }}>
+      <div style={{ height: '120vh' }}>
+        <div style={{ height: '800px', position: 'sticky', top: '100px' }}>
           <div className='flex square-move o-hidden'>
             <div className='circle c1'></div>
             <div className='circle c2'></div>
@@ -542,12 +557,16 @@ function IntroAnimation () {
               video.play();
             }}>
               <span>Play Video</span>
-              <div className='arrow-right'></div>
+              <div className='arrow-right' />
             </div>
             <video width='1200' height='600' controls className='hidden absolute' ref={videoRef}>
               <source src='https://atl-assets.s3.amazonaws.com/video/RoughCut04a_231108.mp4' type='video/mp4' />
             </video>
-            {/* <div><span>Scroll for the story</span></div> */}
+          </div>
+          <div className='absolute scroll-story job hidden'>
+            <div className='arrow-down' />
+            <span>Scroll for the story</span>
+            <div className='arrow-down' />
           </div>
         </div>
       </div>
