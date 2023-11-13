@@ -11,7 +11,7 @@ import Section3 from './sections/section3-text-change-color/section3';
 
 function App() {
   return (
-    <div className="App">
+    <div className='app'>
       <div className='nav hidden'>
           <AtlImg />
         </div>
@@ -173,7 +173,7 @@ function App() {
         </Scrollytelling.Root> */}
       </div>
       <footer className='hidden'>
-        <AtlWYBImg alt='Atlanta: Where You Belong' height='150' />
+        <AtlWYBImg alt='Atlanta: Where You Belong' height='140' />
       </footer>
     </div>
   );
