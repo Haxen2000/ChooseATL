@@ -1,7 +1,6 @@
+import { useEffect, useRef } from "react";
+import { gsap } from 'gsap';
 import './App.css';
-import * as Scrollytelling from '@bsmnt/scrollytelling';
-import img5 from './assets/img/ac8c1be75ebcccbd92c43d1511d267e3.jpg';
-import img6 from './assets/img/4ad255d5c81ceb123336519ea6a3a8c7.jpg';
 import { ReactComponent as AtlImg } from './assets/img/atl.svg';
 import { ReactComponent as AtlWYBImg } from './assets/img/atlwyb.svg';
 import IntroAnimation from './sections/intro/intro-animation';
@@ -10,8 +9,31 @@ import Section2 from './sections/section2-text-img-scrolling/section2';
 import Section3 from './sections/section3-text-change-color/section3';
 
 function App() {
+  const appRef = useRef();
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      console.log(document.querySelectorAll('.arrow-down'));
+      gsap.to('.arrow-down', {
+        keyframes: {
+          '33%': {
+            y: -10,
+            ease: 'power1.inOut',
+          },
+          '66%': {
+            y: 0,
+            ease: 'Bounce.easeOut',
+          },
+        },
+        duration: 3,
+        repeat: -1,
+      })
+    }, appRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className='app'>
+    <div className='app' ref={appRef}>
       <div className='nav hidden'>
           <AtlImg />
         </div>
@@ -171,6 +193,9 @@ function App() {
             </div>
           </section>
         </Scrollytelling.Root> */}
+      </div>
+      <div className='fixed scroll-story job hidden'>
+        <div className='arrow-down' />
       </div>
       <footer className='hidden'>
         <AtlWYBImg alt='Atlanta: Where You Belong' height='140' />

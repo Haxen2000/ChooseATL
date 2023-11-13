@@ -515,21 +515,6 @@ function IntroAnimation () {
           document.body.classList.add('ofauto');
         }
       });
-
-      gsap.to('.arrow-down', {
-        keyframes: {
-          '33%': {
-            y: -10,
-            ease: ease,
-          },
-          '66%': {
-            y: 0,
-            ease: 'Bounce.easeOut',
-          },
-        },
-        duration: 3,
-        repeat: -1,
-      })
     }, introSectionRef);
     return () => ctx.revert();
   }, []);
@@ -562,11 +547,6 @@ function IntroAnimation () {
             <video width='1200' height='600' controls className='hidden absolute' ref={videoRef}>
               <source src='https://atl-assets.s3.amazonaws.com/video/RoughCut04a_231108.mp4' type='video/mp4' />
             </video>
-          </div>
-          <div className='absolute scroll-story job hidden'>
-            <div className='arrow-down' />
-            <span>Scroll for the story</span>
-            <div className='arrow-down' />
           </div>
         </div>
       </div>

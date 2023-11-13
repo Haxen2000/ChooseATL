@@ -133,7 +133,8 @@ video {
 }
 
 .scroll-story {
-  bottom: 90px;
-  width: 240px;
-  left: calc(50% - 120px);
+  position: fixed;
+  bottom: 10px;
+  z-index: 9999;
+  width: 100%;
 }
