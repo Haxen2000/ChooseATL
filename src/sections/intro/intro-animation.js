@@ -9,8 +9,14 @@ import AtlWYBImg from '../../assets/img/atlwyb-noatl.svg';
 function IntroAnimation () {
   const introSectionRef = useRef();
   const videoRef = useRef();
+  const c1 = document.querySelector('.c1');
 
   useEffect(() => {
+    videoRef.current.onended = (e) => {
+      videoRef.current.classList.add('hidden');
+      c1.classList.remove('hidden');
+    }
+
     const animationTime = 5;
     const screenWidth = window.outerWidth;
     const widthHeight = screenWidth > 1024 ? 400 : 200;
@@ -211,7 +217,7 @@ function IntroAnimation () {
             top: moveY.start,
             width: widthHeight,
             height: widthHeight,
-            backgroundSizeX: backgroundSize * 4 / 3,
+            backgroundSize: backgroundSize * 4 / 3,
             zIndex: 7,
           },
           '25%': {
@@ -219,7 +225,7 @@ function IntroAnimation () {
             top: moveY.top - widthHeight / 2,
             width: widthHeight * 1.25,
             height: widthHeight * 1.25,
-            backgroundSizeX: backgroundSize * 1.25 * 4 / 3,
+            backgroundSize: backgroundSize * 1.25 * 4 / 3,
             zIndex: 8,
             ease: 'power2.out',
           },
@@ -538,7 +544,7 @@ function IntroAnimation () {
             <div className='circle play flex align-center hidden' onClick={() => {
               const video = document.querySelector('video');
               video.classList.remove('hidden');
-              document.querySelector('.c1').classList.add('hidden');
+              c1.classList.add('hidden');
               video.play();
             }}>
               <span>Play Video</span>

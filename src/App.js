@@ -7,13 +7,15 @@ import IntroAnimation from './sections/intro/intro-animation';
 import Section1 from './sections/section1-part-of-this-place/section1';
 import Section2 from './sections/section2-text-img-scrolling/section2';
 import Section3 from './sections/section3-text-change-color/section3';
+/*import * as Scrollytelling from '@bsmnt/scrollytelling';
+import img5 from './assets/img/ac8c1be75ebcccbd92c43d1511d267e3.jpg';
+import img6 from './assets/img/4ad255d5c81ceb123336519ea6a3a8c7.jpg';*/
 
 function App() {
   const appRef = useRef();
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      console.log(document.querySelectorAll('.arrow-down'));
       gsap.to('.arrow-down', {
         keyframes: {
           '33%': {
