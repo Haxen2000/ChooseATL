@@ -9,12 +9,12 @@ import AtlWYBImg from '../../assets/img/atlwyb-noatl.svg';
 function IntroAnimation () {
   const introSectionRef = useRef();
   const videoRef = useRef();
-  const c1 = document.querySelector('.c1');
+  let c1 = useRef();
 
   useEffect(() => {
     videoRef.current.onended = (e) => {
       videoRef.current.classList.add('hidden');
-      c1.classList.remove('hidden');
+      c1.current.classList.remove('hidden');
     }
 
     const animationTime = 5;
@@ -530,7 +530,7 @@ function IntroAnimation () {
       <div style={{ height: '120vh' }}>
         <div style={{ height: '800px', position: 'sticky', top: '100px' }}>
           <div className='flex square-move o-hidden'>
-            <div className='circle c1'></div>
+            <div className='circle c1' ref={c1}></div>
             <div className='circle c2'></div>
             <div className='circle c3'></div>
             <div className='circle c4'></div>
@@ -542,9 +542,10 @@ function IntroAnimation () {
             <img src={AtlWYBImg} alt='Atlanta - Where You Belong' className='atl-wyb' />
             <AtlImg />
             <div className='circle play flex align-center hidden' onClick={() => {
+              console.log(c1)
               const video = document.querySelector('video');
               video.classList.remove('hidden');
-              c1.classList.add('hidden');
+              c1.current.classList.add('hidden');
               video.play();
             }}>
               <span>Play Video</span>
