@@ -11,23 +11,26 @@ function IntroAnimation () {
   const videoRef = useRef();
 
   useEffect(() => {
-    const baseX = -200;
+    const animationTime = 5;
+    const screenWidth = window.outerWidth;
+    const widthHeight = screenWidth > 1024 ? 400 : 200;
+    const backgroundSize = screenWidth > 1024 ? 600 : 400;
+    const baseX = screenWidth > 1024 ? -200 : -100;
     const moveX = {
       small: baseX / 4,
       // left: baseX - baseX * 1.4,
-      left: -625,
+      left: screenWidth > 1024 ? -625 : -325,
       // right: baseX + baseX * -1.5,
-      right: 125,
+      right: screenWidth > 1024 ? 125 : 25,
       start: baseX,
     };
   
-    const baseY = 100;
+    const baseY = screenWidth > 1024 ? 100 : 50;
     const moveY = {
       top: baseY * 2 / 3,
       bottom: baseY * 4 / 3,
       start: baseY,
     }
-    const animationTime = 5;
     const delayTime = 2;
     const repeat = 0; // -1 for infinite
     const repeatDelay = 1;
@@ -39,8 +42,6 @@ function IntroAnimation () {
       ease: ease,
       delay: delayTime,
     }
-    const widthHeight = 400;
-    const backgroundSize = 600;
 
     let ctx = gsap.context(() => {
       gsap.to('.c1', { // blue
@@ -210,7 +211,7 @@ function IntroAnimation () {
             top: moveY.start,
             width: widthHeight,
             height: widthHeight,
-            backgroundSize: backgroundSize,
+            backgroundSizeX: backgroundSize * 4 / 3,
             zIndex: 7,
           },
           '25%': {
@@ -218,8 +219,8 @@ function IntroAnimation () {
             top: moveY.top - widthHeight / 2,
             width: widthHeight * 1.25,
             height: widthHeight * 1.25,
-            backgroundSize: backgroundSize * 1.25,
-            zIndex: 10,
+            backgroundSizeX: backgroundSize * 1.25 * 4 / 3,
+            zIndex: 8,
             ease: 'power2.out',
           },
           '50%': {
@@ -227,7 +228,7 @@ function IntroAnimation () {
             top: moveY.top - widthHeight / 4,
             width: widthHeight * .75,
             height: widthHeight * .75,
-            backgroundSize: backgroundSize * .75,
+            backgroundSize: backgroundSize * .75 * 4 / 3,
             zIndex: 6,
           },
           '75%': {
@@ -235,7 +236,7 @@ function IntroAnimation () {
             top: moveY.top - widthHeight / 2,
             width: widthHeight * 1.25,
             height: widthHeight * 1.25,
-            backgroundSize: backgroundSize * 1.25,
+            backgroundSize: backgroundSize * 1.25 * 4 / 3,
             zIndex: 9,
           },
           '100%': {
@@ -243,7 +244,7 @@ function IntroAnimation () {
             top: moveY.start,
             width: widthHeight,
             height: widthHeight,
-            backgroundSize: backgroundSize,
+            backgroundSize: backgroundSize * 4 / 3,
             zIndex: 8,
           },
           easeEach: 'none',
@@ -257,7 +258,7 @@ function IntroAnimation () {
             top: moveY.start,
             width: widthHeight,
             height: widthHeight,
-            backgroundSize: backgroundSize,
+            backgroundSize: backgroundSize * 4 / 3,
             zIndex: 7,
           },
           '25%': {
@@ -265,7 +266,7 @@ function IntroAnimation () {
             top: moveY.top - 50,
             width: widthHeight * 1.25,
             height: widthHeight * 1.25,
-            backgroundSize: backgroundSize * 1.25,
+            backgroundSize: backgroundSize * 1.25 * 4 / 3,
             zIndex: 10,
             ease: 'power2.out',
           },
@@ -274,7 +275,7 @@ function IntroAnimation () {
             top: moveY.top,
             width: widthHeight * 1.5,
             height: widthHeight * 1.5,
-            backgroundSize: backgroundSize * 1.5,
+            backgroundSize: backgroundSize * 1.5 * 4 / 3,
             zIndex: 12,
           },
           '75%': {
@@ -282,7 +283,7 @@ function IntroAnimation () {
             top: moveY.top,
             width: widthHeight * 1.25,
             height: widthHeight * 1.25,
-            backgroundSize: backgroundSize * 1.25,
+            backgroundSize: backgroundSize * 1.25 * 4 / 3,
             zIndex: 10,
           },
           '100%': {
@@ -290,7 +291,7 @@ function IntroAnimation () {
             top: moveY.start,
             width: widthHeight,
             height: widthHeight,
-            backgroundSize: backgroundSize,
+            backgroundSize: backgroundSize * 4 / 3,
             zIndex: 7,
           },
           easeEach: 'none',
@@ -420,7 +421,7 @@ function IntroAnimation () {
             top: moveY.start,
             width: widthHeight,
             height: widthHeight,
-            backgroundSize: backgroundSize,
+            backgroundSize: backgroundSize * 2 / 3,
             zIndex: 9,
           },
           '25%': {
@@ -428,23 +429,23 @@ function IntroAnimation () {
             top: moveY.top - 200,
             width: widthHeight * .75,
             height: widthHeight * .75,
-            backgroundSize: backgroundSize * .75,
-            zIndex: 10,
+            backgroundSize: backgroundSize * .75 * 2 / 3,
+            zIndex: 9,
           },
           '50%': {
             left: moveX.start - 50,
             top: moveY.top,
             width: widthHeight,
             height: widthHeight,
-            backgroundSize: backgroundSize,
+            backgroundSize: backgroundSize * 2 / 3,
             zIndex: 7,
           },
           '75%': {
-            left: moveX.right - 150,
+            left: moveX.right + 50,
             top: moveY.top - 200,
-            width: widthHeight * 1.25,
-            height: widthHeight * 1.25,
-            backgroundSize: backgroundSize * 1.25,
+            width: widthHeight * .75,
+            height: widthHeight * .75,
+            backgroundSize: backgroundSize * .75 * 2 / 3,
             zIndex: 10,
           },
           '100%': {
@@ -452,7 +453,7 @@ function IntroAnimation () {
             top: moveY.start,
             width: widthHeight,
             height: widthHeight,
-            backgroundSize: backgroundSize,
+            backgroundSize: backgroundSize * 2 / 3,
             zIndex: 9,
           },
           easeEach: 'none',
@@ -468,8 +469,7 @@ function IntroAnimation () {
       });
       gsap.to('.atl-wyb, .atl_logo', {
         onStart:() => {
-          console.log(window.outerWidth);
-          document.querySelector('.square-move .atl_logo').style.left = window.outerWidth / 2 - 168;
+          document.querySelector('.square-move .atl_logo').style.left = screenWidth / 2 - 168;
         },
         keyframes: {
           '0': { opacity: 0 },
@@ -512,6 +512,7 @@ function IntroAnimation () {
           document.querySelectorAll('.square-move .atl_logo, .circle:not(.c1, .play)').forEach((e) => {
             e.classList.add('hidden');
           });
+          document.body.classList.add('ofauto');
         }
       });
     }, introSectionRef);
@@ -520,7 +521,7 @@ function IntroAnimation () {
 
   return (
     <section className='section flex' ref={introSectionRef}>
-      <div style={{ height: '170vh' }}>
+      <div style={{ height: '140vh' }}>
         <div style={{ height: '900px', position: 'sticky', top: '100px' }}>
           <div className='flex square-move o-hidden'>
             <div className='circle c1'></div>
