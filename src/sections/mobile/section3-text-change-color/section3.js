@@ -17,61 +17,55 @@ function Section3 () {
     <Scrollytelling.Root>
       <section className='section section3 flex' ref={section3Ref}>
         <Scrollytelling.Pin
-          childHeight={'800px'}
+          childHeight={'110vh'}
           pinSpacerHeight={'4000px'}
-          top={100}
+          top={200}
         >
           <div className='circle-text-change-anim flex'>
             <div className='img-container relative'>
               <Scrollytelling.Animation tween={{ start: 0, end: 100, to: {
-                top: 0, 
-                width: 1200,
-                height: 600,
+                width: '80vw',
+                height: '80vw',
                 borderRadius: 25,
-                backgroundSize: '129.943% 162.037%',
-                backgroundPosition: '-100px -190px',
+                backgroundSize: '272% 135.2%',
+                backgroundPosition: '-350px -100px',
                 onComplete: () => {
-                  document.querySelector('.desktop-container .scroll-story').classList.add('hidden');
+                  document.querySelector('.mobile-container .scroll-story').classList.add('hidden');
                 }
               } }}>
                 <div className='img-holder relative' />
               </Scrollytelling.Animation>
             </div>
-            <svg className='svg-mask absolute' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+            <svg className='svg-mask absolute' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100vw" height="600">
               <defs>
-                <clipPath id="theClipPath">
+                <clipPath id="theClipPathMobile">
                   <Scrollytelling.Animation tween={{ start: 0, end: 100, to: { 
-                    width: 1200,
-                    height: 600,
-                    rx: 25,
-                    y: -100,
-                    x: -323
+                    width: 960,
+                    height: 960,
+                    rx: 240,
+                    y: 0,
+                    x: -180
                   } }}>
-                <rect className="masker" x="323" y="100" rx='277' width="554" height="554" fill="rgba(255,0,0,.8)" />
+                <rect className="masker" x="300" y="-340" rx='300' width="600" height="600" fill="rgba(255,0,0,.8)" />
                   </Scrollytelling.Animation>
                 </clipPath>
               </defs> 
               <foreignObject x="150" y="350" width="900" height="180">
                 <div>
                   <span className='quote'>You see that Atlanta isn't one thing.<br/>It's a multitude.<br/>
-                    {/* <Scrollytelling.Animation tween={{ start: 40, end: 100, from: { width: 0, padding: 0 } }}>
-                      <div className='anim-text-holder'>
-                        <span className='anim-text peach'>Find your place in 2024.</span>
-                      </div>
-                    </Scrollytelling.Animation> */}
                   </span>
                 </div>
               </foreignObject>
               {/* <Scrollytelling.Animation tween={{ start: 0, end: 100, to: { 
-                width: 1200,
-                height: 600,
-                rx: 25,
-                y: -100,
-                x: -323
+                width: 960,
+                height: 960,
+                rx: 240,
+                y: 0,
+                x: -180
               } }}>
-                <rect className="masker" x="323" y="100" rx='277' width="554" height="554" fill="rgba(255,0,0,.8)" />
+                <rect className="masker" x="300" y="-340" rx='300' width="600" height="600" fill="rgba(255,0,0,.8)" />
               </Scrollytelling.Animation> */}
-              <g clipPath="url(#theClipPath)">
+              <g clipPath="url(#theClipPathMobile)">
                 <foreignObject x="150" y="350" width="900" height="180">
                   <div>
                     <span className='quote other'>You see that Atlanta isn't one thing.<br/>It's a multitude.<br/>
