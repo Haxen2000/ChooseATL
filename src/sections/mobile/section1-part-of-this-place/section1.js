@@ -8,23 +8,23 @@ function Section1 () {
         <Scrollytelling.Pin
           childHeight={'100vh'}
           pinSpacerHeight={'250vh'}
-          top={50}
+          top={75}
         >
           <div className='card'>
             <div className='column'>
               <div className='img-container'>
                 <div className='ani-relative o-hidden img1-holder'>
-                  <Scrollytelling.Animation tween={{ start: 0, end: 25, to: { left: 0 } }}>
+                  <Scrollytelling.Animation tween={{ start: 0, end: 25, to: { left: 15 } }}>
                     <div className='img img1' />
                   </Scrollytelling.Animation>
                 </div>
                 <div className='ani-relative o-hidden img2-holder'>
-                  <Scrollytelling.Animation tween={{ start: 25, end: 50, to: { left: 140 } }}>
+                  <Scrollytelling.Animation tween={{ start: 25, end: 50, to: { left: 155 } }}>
                     <div className='img img2' />
                   </Scrollytelling.Animation>
                 </div>
                 <div className='ani-relative o-hidden img3-holder'>
-                  <Scrollytelling.Animation tween={{ start: 50, end: 75, to: { left: 50 } }}>
+                  <Scrollytelling.Animation tween={{ start: 50, end: 75, to: { left: 65 } }}>
                     <div className='img img3' />
                   </Scrollytelling.Animation>
                 </div>

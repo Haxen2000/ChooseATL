@@ -148,7 +148,7 @@ body.ofauto {
 .card .img-container {
   height: 655px;
   @media (max-width: 1024px) {
-    height: 350px;
+    height: 300px;
   }
 }
 
