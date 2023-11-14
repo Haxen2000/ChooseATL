@@ -1,4 +1,4 @@
-.circle {
+.mobile-container .circle {
   border-radius: 550px;
   position: absolute;
   background-position: 50%;
@@ -12,56 +12,56 @@
   }
 }
 
-.c1 {
+.mobile-container .c1 {
   background-image: url('../../../assets/img/39ec1f9d44fe61e3390397ef09a634ea.jpg');
   filter: brightness(80%);
   z-index: 10;
 }
 
-.c2 {
+.mobile-container .c2 {
   background-image: url('../../../assets/img/c307ef76d3e8dc9ede8e13870af461b5.jpg');
 }
 
-.c3 {
+.mobile-container .c3 {
   background-image: url('../../../assets/img/fec653ceb6090ced58a730b842d5f5ed.jpg');
 }
 
-.c4 {
+.mobile-container .c4 {
   background-image: url('../../../assets/img/c5ec34283809bb508544f5a74acc9ab4.jpg');
   background-size: 800px;
   background-position: 45% 0%;
 }
 
-.c5 {
+.mobile-container .c5 {
   background-image: url('../../../assets/img/30bab58d3cee68e66b5a7202d53285d4.jpg');
   background-size: 800px;
   background-position: 45% 100%;
 }
 
-.c6 {
+.mobile-container .c6 {
   background-image: url('../../../assets/img/4a09714c958f10bb46f628d9cef53f98.jpg');
   background-position: 45% 30%;
 }
 
-.c7 {
+.mobile-container .c7 {
   background-image: url('../../../assets/img/a3e715fe228c8a09704a782c9e0206ff.jpg');
 }
 
-.c8 {
+.mobile-container .c8 {
   background-image: url('../../../assets/img/e16b7d4c87309526d289d19f2519f920.jpg');
   background-size: 400px;
   background-position: 40% 60%;
 }
 
-.square-move .atl_logo,
-.square-move .atl-wyb,
-.square-move .atl-wyb-cir {
+.mobile-container .square-move .atl_logo,
+.mobile-container .square-move .atl-wyb,
+.mobile-container .square-move .atl-wyb-cir {
   position: absolute;
   z-index: 100;
   color: #fff;
 }
 
-.square-move .atl-wyb-cir {
+.mobile-container .square-move .atl-wyb-cir {
   @media (max-width: 1024px) {
     top: 290px;
     left: -60px;
@@ -69,7 +69,7 @@
   }
 }
 
-.square-move .atl-wyb {
+.mobile-container .square-move .atl-wyb {
   opacity: 0;
   @media (max-width: 1024px) {
     top: 310px;
@@ -78,7 +78,7 @@
   }
 }
 
-.square-move .atl_logo {
+.mobile-container .square-move .atl_logo {
   position: fixed;
   opacity: 0;
   @media (max-width: 1024px) {
@@ -87,7 +87,7 @@
   }
 }
 
-.play {
+.mobile-container .play {
   width: 150px;
   height: 150px;
   background-color: #E12D2D;
@@ -101,11 +101,11 @@
   top: 250px;
 }
 
-.play span {
+.mobile-container .play span {
   padding-right: 5px;
 }
 
-.arrow-right {
+.mobile-container .arrow-right {
   width: 0;
   height: 0;
   border-top: 7px solid transparent;
@@ -113,7 +113,7 @@
   border-left: 9px solid white;
 }
 
-.arrow-down {
+.mobile-container .arrow-down {
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
@@ -123,12 +123,12 @@
   margin: 0 10px;
 }
 
-video {
+.mobile-container video {
   z-index: 100;
   top: 200px;
 }
 
-.scroll-story {
+.mobile-container .scroll-story {
   position: fixed;
   bottom: 10px;
   z-index: 9999;
