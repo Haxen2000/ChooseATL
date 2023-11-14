@@ -2,11 +2,12 @@ import './section1.css';
 import * as Scrollytelling from '@bsmnt/scrollytelling';
 
 function Section1 () {
+  const screenWidth = window.outerWidth;
   return (
     <Scrollytelling.Root>
       <section className='section section1 flex'>
         <Scrollytelling.Pin
-          childHeight={'700px'}
+          childHeight={screenWidth > 1024 ? '700px' : 1}
           pinSpacerHeight={'3500px'}
           top={100}
         >

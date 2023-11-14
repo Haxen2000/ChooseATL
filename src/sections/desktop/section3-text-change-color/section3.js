@@ -17,7 +17,7 @@ function Section3 () {
     <Scrollytelling.Root>
       <section className='section section3 flex' ref={section3Ref}>
         <Scrollytelling.Pin
-          childHeight={'750px'}
+          childHeight={'800px'}
           pinSpacerHeight={'4000px'}
           top={100}
         >

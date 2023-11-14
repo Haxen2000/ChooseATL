@@ -27,6 +27,12 @@
   font-style: normal;
 }
 
+.desktop-container {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
 body {
   overflow: hidden;
 }
@@ -110,19 +116,31 @@ body.ofauto {
   text-align: left;
   display: flex;
   overflow: hidden;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 
 .column {
   width: 50%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 }
 
 .card .text-container {
   padding: 60px 80px;
+  @media (max-width: 1024px) {
+    padding: 0px 40px;
+  }
 }
 
 .card .img-container {
-  /* background-color: lightgrey; */
   height: 655px;
+  @media (max-width: 1024px) {
+    height: 300px;
+  }
 }
 
 .img-container img {
@@ -227,7 +245,10 @@ body.ofauto {
   top: 13px;
   left: 62px;
   position: absolute;
-  width: 138px;
+  width: 62px;
+  @media (max-width: 1024px) {
+    left: 15%;
+  }
 }
 
 footer {

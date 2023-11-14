@@ -1,11 +1,11 @@
 import './section2.css';
 import * as Scrollytelling from '@bsmnt/scrollytelling';
-import img1 from '../../assets/img/02e08baea97db281f6074e0d29fcf2e1.jpg';
-import img2 from '../../assets/img/cf58a3f729bd67eb71335d4286b1332b.jpg';
-import img3 from '../../assets/img/e60fb9599768963379a081f719323db0.jpg';
-import img4 from '../../assets/img/d2da87aabefd76d686b160798b68a5ee.jpg';
-import img5 from '../../assets/img/3166464d7cd087180df03cd3da1b18f5.jpg';
-import img6 from '../../assets/img/6b073a100c44d7544535d777d27930e7.jpg';
+import img1 from '../../../assets/img/02e08baea97db281f6074e0d29fcf2e1.jpg';
+import img2 from '../../../assets/img/cf58a3f729bd67eb71335d4286b1332b.jpg';
+import img3 from '../../../assets/img/e60fb9599768963379a081f719323db0.jpg';
+import img4 from '../../../assets/img/d2da87aabefd76d686b160798b68a5ee.jpg';
+import img5 from '../../../assets/img/3166464d7cd087180df03cd3da1b18f5.jpg';
+import img6 from '../../../assets/img/6b073a100c44d7544535d777d27930e7.jpg';
 
 function Section2 () {
   const images = [img1, img2, img3, img4, img5, img6];
@@ -41,7 +41,7 @@ function Section2 () {
                     <span className='job'>Yes, it's a bustling job market complete with Fortune 500 corporations, startup incubators, world-leading financial tech, and nonstop film and TV production.</span>
                   </Scrollytelling.Animation>
                   <Scrollytelling.Animation tween={{ start: 40, end: 50, from: { top: 1440 } }}>
-                    <span className='job'>But it's also serene, walkable neighborhoods. It's six major sports teams and their rabid fan bases. But it's also the lifetime bonds formed within cycling clubs, softball teams, and improv troupes.</span>
+                    <span className='job'>But it's also serene, walkable neighborhoods. It's five major sports teams and their rabid fan bases. But it's also the lifetime bonds formed within cycling clubs, softball teams, and improv troupes.</span>
                   </Scrollytelling.Animation>
                 </div>
               </div>
