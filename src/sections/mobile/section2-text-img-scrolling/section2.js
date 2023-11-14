@@ -13,7 +13,7 @@ function Section2 () {
   for (let i = 0; i < 6; i++) {
     imgHolders.push(
       <div className='ani-relative o-hidden relative' style={{ top: -254 * i }} key={i}>
-        <Scrollytelling.Animation tween={{ start: 100 / 7 * (i), end: (i === 0 ? 0 : 100 / 7 * (i + 1)), from: { top: 440 } }}>
+        <Scrollytelling.Animation tween={{ start: 100 / 8 * (i), end: (i === 0 ? 0 : 100 / 8 * (i + 1)), from: { top: 255 } }}>
           <img src={images[i]} alt='alt' style={{
             width: '100%',
             height: 'auto',
@@ -31,7 +31,7 @@ function Section2 () {
         <section className='section section2-1 flex'>
           <Scrollytelling.Pin
             childHeight={'100vh'}
-            pinSpacerHeight={'1000vh'}
+            pinSpacerHeight={'950vh'}
             top={75}
           >
             <div className='card'>
@@ -40,7 +40,7 @@ function Section2 () {
                   <Scrollytelling.Animation tween={{ start: 40, end: 50, to: { opacity: 0 } }}>
                     <span className='job'>Yes, it's a bustling job market complete with Fortune 500 corporations, startup incubators, world-leading financial tech, and nonstop film and TV production.</span>
                   </Scrollytelling.Animation>
-                  <Scrollytelling.Animation tween={{ start: 40, end: 60, from: { top: 240 } }}>
+                  <Scrollytelling.Animation tween={{ start: 40, end: 50, from: { top: 240 } }}>
                     <span className='job'>But it's also serene, walkable neighborhoods. It's five major sports teams and their rabid fan bases. But it's also the lifetime bonds formed within cycling clubs, softball teams, and improv troupes.</span>
                   </Scrollytelling.Animation>
                 </div>
