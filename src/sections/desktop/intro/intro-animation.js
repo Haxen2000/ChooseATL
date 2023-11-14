@@ -48,7 +48,7 @@ function IntroAnimation () {
       }
 
       let ctx = gsap.context(() => {
-        gsap.to('.c1', { // blue
+        gsap.to('.desktop-container .c1', { // blue
           keyframes: {
             '0%': { 
               left: moveX.start,
@@ -111,7 +111,7 @@ function IntroAnimation () {
           },
           ...gsapProps
         });
-        gsap.to('.c2', { // crimson
+        gsap.to('.desktop-container .c2', { // crimson
           keyframes: {
             '0%': { 
               left: moveX.start,
@@ -157,7 +157,7 @@ function IntroAnimation () {
           },
           ...gsapProps
         });
-        gsap.to('.c3', { // gold
+        gsap.to('.desktop-container .c3', { // gold
           keyframes: {
             '0%': { 
               left: moveX.start,
@@ -208,7 +208,7 @@ function IntroAnimation () {
           repeatDelay: repeatDelay + animationTime * .05,
           ease: ease,
         });
-        gsap.to('.c4', { // hotpink
+        gsap.to('.desktop-container .c4', { // hotpink
           keyframes: {
             '0%': { 
               left: moveX.start,
@@ -255,7 +255,7 @@ function IntroAnimation () {
           },
           ...gsapProps
         });
-        gsap.to('.c5', { // limegreen
+        gsap.to('.desktop-container .c5', { // limegreen
           keyframes: {
             '0%': { 
               left: moveX.start,
@@ -302,7 +302,7 @@ function IntroAnimation () {
           },
           ...gsapProps
         });
-        gsap.to('.c6', { // maroon
+        gsap.to('.desktop-container .c6', { // maroon
           keyframes: {
             '0%': {
               left: moveX.start,
@@ -364,7 +364,7 @@ function IntroAnimation () {
           },
           ...gsapProps
         });
-        gsap.to('.c7', { // seagreen
+        gsap.to('.desktop-container .c7', { // seagreen
           keyframes: {
             '0%': {
               left: moveX.start,
@@ -418,7 +418,7 @@ function IntroAnimation () {
           },
           ...gsapProps
         });
-        gsap.to('.c8', { // turquoise 
+        gsap.to('.desktop-container .c8', { // turquoise 
           keyframes: {
             '0%': { 
               left: moveX.start,
@@ -464,16 +464,16 @@ function IntroAnimation () {
           },
           ...gsapProps
         });
-        gsap.to('.atl-wyb-cir', {
+        gsap.to('.desktop-container .atl-wyb-cir', {
           keyframes: {
             '0%': { opacity: 1 },
             '10%': { opacity: 0 },
           },
           ...gsapProps
         });
-        gsap.to('.atl-wyb, .atl_logo', {
+        gsap.to('.desktop-container .atl-wyb, .desktop-container .atl_logo', {
           onStart:() => {
-            document.querySelector('.square-move .atl_logo').style.left = window.outerWidth / 2 - 168;
+            document.querySelector('.desktop-container .square-move .atl_logo').style.left = window.outerWidth / 2 - 168;
           },
           keyframes: {
             '0': { opacity: 0 },
@@ -483,7 +483,7 @@ function IntroAnimation () {
           ...gsapProps
         });
 
-        gsap.to('.c1', {
+        gsap.to('.desktop-container .c1', {
           top: 20,
           left: -600,
           width: 1200,
@@ -496,13 +496,13 @@ function IntroAnimation () {
           duration: 2
         });
 
-        gsap.to('.atl-wyb', {
+        gsap.to('.desktop-container .atl-wyb', {
           opacity: 0,
           delay: animationTime + delayTime * 2,
           duration: 2,
         });
 
-        gsap.to('.atl_logo', {
+        gsap.to('.desktop-container .atl_logo', {
           top: 13,
           left: 62,
           width: 62,
