@@ -524,7 +524,7 @@ function IntroAnimation () {
 
   return (
     <section className='section flex o-hidden' ref={introSectionRef}>
-      <div style={{ height: '120vh' }}>
+      <div style={{ height: '100vh' }}>
         <div style={{ 
           height: '800px',
           position: 'sticky',

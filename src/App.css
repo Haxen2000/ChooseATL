@@ -126,6 +126,8 @@ body.ofauto {
   @media (max-width: 1024px) {
     flex-direction: column;
     flex-wrap: nowrap;
+    /* height: 400px;
+    overflow: visible; */
   }
 }
 
@@ -146,7 +148,7 @@ body.ofauto {
 .card .img-container {
   height: 655px;
   @media (max-width: 1024px) {
-    height: 300px;
+    height: 350px;
   }
 }
 
@@ -163,7 +165,11 @@ body.ofauto {
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 48px */
-  padding-bottom: 30px
+  padding-bottom: 30px;
+
+  @media (max-width: 1024px) {
+    font-size: 32px;
+  }
 }
 
 .card .heading {
@@ -205,7 +211,11 @@ body.ofauto {
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
-}
+  @media (max-width: 1024px) {
+    font-size: 15px;
+    line-height: 21px;
+  }
+ }
 
 .data {
   font-family: 'Masifa Medium';
