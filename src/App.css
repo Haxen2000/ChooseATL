@@ -33,6 +33,13 @@
   }
 }
 
+.mobile-container {
+  display: none;
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
+
 body {
   overflow: hidden;
 }
@@ -247,7 +254,7 @@ body.ofauto {
   position: absolute;
   width: 62px;
   @media (max-width: 1024px) {
-    left: 15%;
+    position: static;
   }
 }
 

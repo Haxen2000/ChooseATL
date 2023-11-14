@@ -545,7 +545,7 @@ function IntroAnimation () {
             <AtlImg />
             <div className='circle play flex align-center hidden' onClick={() => {
               console.log(c1)
-              const video = document.querySelector('video');
+              const video = document.querySelector('.desktop-container video');
               video.classList.remove('hidden');
               c1.current.classList.add('hidden');
               video.play();
