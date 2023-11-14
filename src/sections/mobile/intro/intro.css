@@ -125,8 +125,7 @@
 
 video {
   z-index: 100;
-  left: -600px;
-  top: 20px;
+  top: 200px;
 }
 
 .scroll-story {
