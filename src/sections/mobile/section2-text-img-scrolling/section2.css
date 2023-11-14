@@ -1,0 +1,25 @@
+.section2-1 .card,
+.section2-2 .card {
+  height: auto;
+}
+
+.section2-1 .text-container .job:first-child {
+  top: 56px;
+}
+
+.section2-1 .text-container .job:last-child {
+  top: -42px;
+}
+
+.section2-1 .job {
+  position: relative;
+  font-size: 20px;
+}
+
+.section2-1 .img-container {
+  height: 435px;
+}
+
+.section2-2 .card {
+  gap: 12px;
+}

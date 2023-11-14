@@ -9,7 +9,7 @@ import Section2 from './sections/desktop/section2-text-img-scrolling/section2';
 import Section3 from './sections/desktop/section3-text-change-color/section3';
 import MobileIntroAnimation from './sections/mobile/intro/intro-animation';
 import MobileSection1 from './sections/mobile/section1-part-of-this-place/section1';
-// import MobileSection2 from './sections/mobile/section2-text-img-scrolling/section2';
+import MobileSection2 from './sections/mobile/section2-text-img-scrolling/section2';
 // import MobileSection3 from './sections/mobile/section3-text-change-color/section3';
 /*import * as Scrollytelling from '@bsmnt/scrollytelling';
 import img5 from './assets/img/ac8c1be75ebcccbd92c43d1511d267e3.jpg';
@@ -215,8 +215,8 @@ function App() {
         <MobileIntroAnimation />
         <div className='scrolly-telling-container hidden'>
           <MobileSection1 />
-          {/* <MobileSection2 />
-          <MobileSection3 /> */}
+          <MobileSection2 />
+          {/* <MobileSection3 /> */}
         </div>
         <div className='fixed scroll-story job hidden'>
           <div className='arrow-down' />
