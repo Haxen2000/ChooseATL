@@ -1,4 +1,4 @@
-.section3 .img-holder {
+.desktop-container .section3 .img-holder {
   width: 554px;
   height: 554px;
   border-radius: 277px;
@@ -10,32 +10,32 @@
   filter: brightness(80%);
 }
 
-.section3 .img-container {
+.desktop-container .section3 .img-container {
   width: 100%;
   height: 700px;
 }
 
-.section3 .quote.other {
+.desktop-container .section3 .quote.other {
   color: white;
 }
 
-.section3 .circle-text-change-anim {
+.desktop-container .section3 .circle-text-change-anim {
   width: 1200px;
 }
 
-.svg-mask {
+.desktop-container .svg-mask {
   top: -100px;
   text-align: center;
 }
 
-.anim-text-holder {
+.desktop-container .anim-text-holder {
   margin: 10px auto 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
 }
 
-.anim-text {
+.desktop-container .anim-text {
   padding: 10px 15px;
   white-space: nowrap;
 }
