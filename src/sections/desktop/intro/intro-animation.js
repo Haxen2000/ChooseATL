@@ -473,7 +473,11 @@ function IntroAnimation () {
         });
         gsap.to('.desktop-container .atl-wyb, .desktop-container .atl_logo', {
           onStart:() => {
-            document.querySelector('.desktop-container .square-move .atl_logo').style.left = window.outerWidth / 2 - 168;
+            const logo = document.querySelector('.desktop-container .square-move .atl_logo');
+            const outerHeightMath = window.outerHeight - 668 > 0 ? window.outerHeight - 668 : 0;
+            const newHeight = outerHeightMath + 220 > 313 ? 313 : outerHeightMath + 220;
+            logo.style.left = window.outerWidth / 2 - 150;
+            logo.style.top = newHeight;
           },
           keyframes: {
             '0': { opacity: 0 },
