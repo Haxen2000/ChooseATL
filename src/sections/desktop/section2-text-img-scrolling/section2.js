@@ -41,7 +41,7 @@ function Section2 () {
                     <span className='job'>Yes, it's a bustling job market complete with Fortune 500 corporations, startup incubators, world-leading financial tech, and nonstop film and TV production.</span>
                   </Scrollytelling.Animation>
                   <Scrollytelling.Animation tween={{ start: 40, end: 50, from: { top: 1440 } }}>
-                    <span className='job'>But it's also serene, walkable neighborhoods. It's five major sports teams and their rabid fan bases. But it's also the lifetime bonds formed within cycling clubs, softball teams, and improv troupes.</span>
+                    <span className='job'>But it's also serene, walkable neighborhoods. It's five major sports teams and their rabid fan bases. It's also the lifetime bonds formed within cycling clubs, softball teams, and improv troupes.</span>
                   </Scrollytelling.Animation>
                 </div>
               </div>
