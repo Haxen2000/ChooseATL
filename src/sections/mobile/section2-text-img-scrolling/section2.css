@@ -1,25 +1,27 @@
-.section2-1 .card,
-.section2-2 .card {
+.mobile-container .section2-1 .card,
+.mobile-container .section2-2 .card {
   height: auto;
 }
 
-.section2-1 .text-container .job:first-child {
+.mobile-container .section2-1 .text-container .job:first-child {
   top: 56px;
 }
 
-.section2-1 .text-container .job:last-child {
+.mobile-container .section2-1 .text-container .job:last-child {
   top: -42px;
 }
 
-.section2-1 .job {
+.mobile-container .section2-1 .job {
   position: relative;
   font-size: 20px;
 }
 
-.section2-1 .img-container {
-  height: 435px;
+.mobile-container .section2-1 .img-container {
+  width: 375px;
+  height: 250px;
+  margin: auto;
 }
 
-.section2-2 .card {
+.mobile-container .section2-2 .card {
   gap: 12px;
 }
