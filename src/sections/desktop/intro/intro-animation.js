@@ -554,7 +554,7 @@ function IntroAnimation () {
               <div className='arrow-right' />
             </div>
             <video width='1200' height='600' controls className='hidden absolute' ref={videoRef}>
-              <source src='https://atl-assets.s3.amazonaws.com/video/RoughCut04a_231108.mp4' type='video/mp4' />
+              <source src='https://atl-assets.s3.amazonaws.com/video/MAC_6d_2301114_Credits.mp4' type='video/mp4' />
             </video>
           </div>
         </div>
