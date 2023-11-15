@@ -81,6 +81,7 @@
 .mobile-container .square-move .atl_logo {
   position: fixed;
   opacity: 0;
+  top: 288px;
   @media (max-width: 1024px) {
     margin-left: 90px;
     width: 70px;
