@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.to('.arrow-down', {
+      gsap.to('.desktop-container .arrow-down', {
         keyframes: {
           '33%': {
             y: -10,
