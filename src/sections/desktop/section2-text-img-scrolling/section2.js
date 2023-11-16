@@ -59,7 +59,7 @@ function Section2 () {
           <Scrollytelling.Pin
             childHeight={'700px'}
             pinSpacerHeight={'2000px'}
-            top={'35vh'}
+            top={'30vh'}
           >
             <Scrollytelling.Animation tween={{ start: 0, end: 30, from: { opacity: 0.1 } }}>
               <div className='card'>
