@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "ATL-Favicon.png",
+      "src": "ATL-Favicon.svg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "ATL-Favicon.png",
+      "src": "ATL-Favicon.svg",
       "type": "image/png",
       "sizes": "512x512"
     }
