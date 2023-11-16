@@ -18,3 +18,8 @@
 .desktop-container .section2-1 .img-container {
   height: 435px;
 }
+
+.desktop-container .section2-1 .img-container > div {
+  width: 604px;
+  height: 435px;
+}
